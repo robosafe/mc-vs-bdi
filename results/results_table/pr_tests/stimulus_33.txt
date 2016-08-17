@@ -1,0 +1,11 @@
+set_param gaze = 1
+tell humanReady
+receivesignal
+set_param pressure = 0
+set_param gaze = 0
+tell leg
+tell humanReady
+bored
+tell humanReady
+receivesignal
+tell leg

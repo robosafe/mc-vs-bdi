@@ -1,0 +1,10 @@
+bored
+tell humanReady
+set_param location = 1
+set_param gaze = 0
+set_param location = 0
+set_param location = 1
+receivesignal
+bored
+set_param gaze = 0
+tell leg

@@ -1,0 +1,21 @@
+[INFO] [WallTime: 1470669025.552487] [2524.739000] State machine starting in initial state 'Pressure10' with userdata: 
+	[]
+[INFO] [WallTime: 1470669025.556712] [2524.748000] State machine transitioning 'Pressure10':'outcome1'-->'Timeout1'
+Bored
+[INFO] [WallTime: 1470669025.659136] [2524.848000] State machine transitioning 'Timeout1':'outcome1'-->'Gaze12'
+[INFO] [WallTime: 1470669025.760319] [2524.948000] State machine transitioning 'Gaze12':'outcome1'-->'Pressure03'
+[INFO] [WallTime: 1470669025.761011] [2524.949000] State machine transitioning 'Pressure03':'outcome1'-->'SendA14'
+[INFO] [WallTime: 1470669030.969162] [2530.053000] State machine transitioning 'SendA14':'outcome1'-->'Location05'
+[INFO] [WallTime: 1470669031.288277] [2530.360000] State machine transitioning 'Location05':'outcome1'-->'Location06'
+[INFO] [WallTime: 1470669031.608033] [2530.661000] State machine transitioning 'Location06':'outcome1'-->'Gaze17'
+[INFO] [WallTime: 1470669031.715017] [2530.763000] State machine transitioning 'Gaze17':'outcome1'-->'Pressure18'
+[INFO] [WallTime: 1470669031.716800] [2530.765000] State machine transitioning 'Pressure18':'outcome1'-->'SendA19'
+[INFO] [WallTime: 1470669037.100478] [2535.865000] State machine transitioning 'SendA19':'outcome1'-->'Gaze110'
+[INFO] [WallTime: 1470669037.200662] [2535.965000] State machine transitioning 'Gaze110':'outcome1'-->'Pressure011'
+[INFO] [WallTime: 1470669037.201973] [2535.966000] State machine transitioning 'Pressure011':'outcome1'-->'Pressure112'
+[INFO] [WallTime: 1470669037.203044] [2535.967000] State machine transitioning 'Pressure112':'outcome1'-->'Pressure113'
+[INFO] [WallTime: 1470669037.203550] [2535.967000] State machine transitioning 'Pressure113':'outcome1'-->'SendA214'
+[INFO] [WallTime: 1470669040.529583] [2539.071000] State machine transitioning 'SendA214':'outcome1'-->'Timeout15'
+Bored
+[INFO] [WallTime: 1470669040.636028] [2539.172000] State machine transitioning 'Timeout15':'outcome1'-->'Pressure016'
+[INFO] [WallTime: 1470669040.636697] [2539.173000] State machine terminating 'Pressure016':'outcome1':'end'

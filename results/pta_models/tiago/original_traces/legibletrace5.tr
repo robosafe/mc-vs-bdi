@@ -1,0 +1,967 @@
+Initial state:
+dog.start  human.start  robot.start  sensors.start  time=0  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=0  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+human.start -> human.choice {0; starting!; chooseact:=rand_v}
+dog.start -> dog.choose {0; starting?; 0}
+robot.start -> robot.waitOrder {0; starting?; time:=0}
+sensors.start -> sensors.sense {0; starting?; 0}
+
+State:
+dog.choose  human.choice  robot.waitOrder  sensors.sense  time=0  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=0  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+dog.choose -> dog.farRobot {0; 0; dog_close:=false}
+
+State:
+dog.farRobot  human.choice  robot.waitOrder  sensors.sense  time=0  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=0  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+human.choice -> human.choose_1action {chooseact==0; 0; action:=rand_v}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=0  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=4  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=8  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=12  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=16  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=20  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=24  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=28  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=32  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=36  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=40  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=44  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=48  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=52  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=56  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=60  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=64  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=68  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=72  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=76  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=80  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=84  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=88  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=92  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=96  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=100  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=104  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=108  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=112  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=116  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=120  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=124  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=128  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=132  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=136  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=140  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=144  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=148  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=152  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=156  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=160  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=164  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=168  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=172  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=176  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=180  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=184  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=188  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=192  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=196  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=200  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=204  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=208  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=212  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=216  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=220  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=224  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=228  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=232  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=236  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=240  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=244  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=248  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=252  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=256  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=260  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=264  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=268  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=272  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=276  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=280  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=284  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=288  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=292  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=296  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=300  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=304  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=308  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=312  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=316  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=320  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=324  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=328  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=332  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=336  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=340  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=344  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=348  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=352  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=356  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=360  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=364  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=368  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=372  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=376  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=380  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=384  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=388  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=392  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=396  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=400  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=404  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=408  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=412  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=416  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=420  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=424  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=428  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=432  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=436  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=440  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=444  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=448  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=452  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=456  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=460  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=464  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=468  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=472  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=476  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=480  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=484  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=488  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=492  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=496  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=500  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=504  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=508  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=512  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=516  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=520  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=524  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=528  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=532  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=536  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=540  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=544  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=548  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=552  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=556  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=560  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=564  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=568  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=572  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=576  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=580  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=584  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=588  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=592  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=596  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.waitOrder {time < MAXclk_Idle; 0; time:=time+4}
+
+State:
+dog.farRobot  human.choose_1action  robot.waitOrder  sensors.sense  time=600  count_timeouts=0  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.waitOrder -> robot.toRecharge {time > =MAXclk_Idle; 0; timeout:=true,count_timeouts:=count_timeouts+1}
+
+State:
+dog.farRobot  human.choose_1action  robot.toRecharge  sensors.sense  time=600  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=1  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+sensors.sense -> sensors.noCollision {0; 0; collision:=false}
+
+State:
+dog.farRobot  human.choose_1action  robot.toRecharge  sensors.noCollision  time=600  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=1  fridge=0  sink=0  clean=0  feed=0  whatever=0  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+human.choose_1action -> human.random3 {action==4; order!; theorder:=5,fridge:=false,sink:=false,clean:=false,feed:=false,whatever:=true}
+
+State:
+dog.farRobot  human.random3  robot.toRecharge  sensors.noCollision  time=600  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=1  fridge=0  sink=0  clean=0  feed=0  whatever=1  collision=0  dog_close=0  theorder=5  
+
+Transitions:
+robot.toRecharge -> robot.recharge {collision==false; 0; time:=time+100}
+
+State:
+dog.farRobot  human.random3  robot.recharge  sensors.noCollision  time=700  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=1  fridge=0  sink=0  clean=0  feed=0  whatever=1  collision=0  dog_close=0  theorder=5  
+
+Transitions:
+robot.recharge -> robot.waitOrder {0; done!; time:=0,timeout:=false}
+human.random3 -> human.close_orders {0; done?; 0}
+
+State:
+dog.farRobot  human.close_orders  robot.waitOrder  sensors.noCollision  time=0  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=1  collision=0  dog_close=0  theorder=5  
+
+Transitions:
+human.close_orders -> human.ended {0; order!; theorder:=0}
+robot.waitOrder -> robot.act {0; order?; 0}
+
+State:
+dog.farRobot  human.ended  robot.act  sensors.noCollision  time=0  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=1  collision=0  dog_close=0  theorder=0  
+
+Transitions:
+robot.act -> robot.ended {theorder==0; 0; 0}
+
+State:
+dog.farRobot  human.ended  robot.ended  sensors.noCollision  time=0  count_timeouts=1  count_feed=0  count_clean=0  choose_dog=0  chooseact=0  action=4  timeout=0  fridge=0  sink=0  clean=0  feed=0  whatever=1  collision=0  dog_close=0  theorder=0  

@@ -1,0 +1,12 @@
+[INFO] [WallTime: 1471177532.501229] [0.000000] Waiting for motion servers...
+[INFO] [WallTime: 1471177532.679952] [10.620000] ...connected.
+[INFO] [WallTime: 1471177535.998856] [13.656000] Robot is ready
+clean
+[INFO] [WallTime: 1471177536.116466] [13.768000] clean
+[INFO] [WallTime: 1471177536.118542] [13.768000] State machine starting in initial state 'Human' with userdata: 
+	[]
+
+[INFO] [WallTime: 1471177567.619532] [43.201000] State machine transitioning 'Human':'outcome1'-->'Grabfood'
+[INFO] [WallTime: 1471177570.334911] [45.722000] grabbed
+[INFO] [WallTime: 1471177570.450230] [45.827000] State machine transitioning 'Grabfood':'outcome1'-->'Sink'
+ended

@@ -1,0 +1,7 @@
+[INFO] [WallTime: 1470685514.469257] [14786.886000] State machine starting in initial state 'Pressure00' with userdata: 
+	[]
+[INFO] [WallTime: 1470685514.472075] [14786.891000] State machine transitioning 'Pressure00':'outcome1'-->'Location01'
+[INFO] [WallTime: 1470685514.795973] [14787.201000] State machine transitioning 'Location01':'outcome1'-->'Gaze02'
+[INFO] [WallTime: 1470685514.908109] [14787.305000] State machine transitioning 'Gaze02':'outcome1'-->'SendA23'
+[INFO] [WallTime: 1470685518.096342] [14790.406000] State machine transitioning 'SendA23':'outcome1'-->'Gaze04'
+[INFO] [WallTime: 1470685518.201850] [14790.506000] State machine terminating 'Gaze04':'outcome1':'end'

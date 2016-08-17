@@ -1,0 +1,9 @@
+set_param gaze = 1
+set_param gaze = 0
+set_param gaze = 0
+set_param location = 1
+set_param gaze = 0
+set_param pressure = 1
+tell humanReady
+bored
+tell humanReady

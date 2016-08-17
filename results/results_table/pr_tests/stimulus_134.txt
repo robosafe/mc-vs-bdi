@@ -1,0 +1,9 @@
+receivesignal
+receivesignal
+bored
+set_param gaze = 0
+set_param gaze = 1
+bored
+bored
+bored
+set_param pressure = 0

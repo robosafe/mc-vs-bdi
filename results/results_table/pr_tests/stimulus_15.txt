@@ -1,0 +1,18 @@
+set_param location = 0
+set_param location = 0
+set_param location = 0
+tell humanReady
+receivesignal
+bored
+tell leg
+tell leg
+tell leg
+set_param gaze = 1
+set_param gaze = 0
+set_param location = 0
+set_param location = 1
+receivesignal
+receivesignal
+bored
+tell humanReady
+set_param gaze = 0

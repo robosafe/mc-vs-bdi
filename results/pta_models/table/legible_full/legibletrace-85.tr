@@ -1,0 +1,663 @@
+Initial state:
+human.start  g.start  p.start  l.start  sensors.null  robot.reset  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=0  hlegs=0  legno=0  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.reset -> robot.waiting {0; 0; legs:=0}
+
+State:
+human.start  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=0  hlegs=0  legno=0  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.start -> human.temp {0; 0; legno:=rand_v,hlegs:=0}
+
+State:
+human.temp  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=0  hlegs=0  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.temp -> human.leg4 {legno==4; 0; legc:=4}
+
+State:
+human.leg4  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=4  hlegs=0  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg4 -> human.count {0; 0; 0}
+
+State:
+human.count  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=4  hlegs=0  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.count -> human.leg1 {0; 0; 0}
+
+State:
+human.leg1  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=4  hlegs=0  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg1 -> human.leg_do {0; 0; time:=0,s:=0,w:=0,legc:=legc-1,bored:=false}
+
+State:
+human.leg_do  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=0  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg_do -> human.activatedRobot {time < (timeMax-40); leg!; time:=time+40,hlegs:=hlegs+1}
+robot.waiting -> robot.moveHandToObjectLocation {0; leg?; 0}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToObjectLocation  time=40  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToObjectLocation -> robot.graspObject {time < (timeMax-100); 0; time:=time+100}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.graspObject  time=140  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.graspObject -> robot.moveHandToHandoverLocation {time < (timeMax-50); 0; time:=time+50,released:=false,discarded:=false}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToHandoverLocation  time=190  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToHandoverLocation -> robot.informedHumanOfHandoverStart {time < (timeMax-60); informHumanOfHandoverStart!; time:=time+60}
+human.activatedRobot -> human.responding {0; informHumanOfHandoverStart?; 0}
+
+State:
+human.responding  g.start  p.start  l.start  sensors.null  robot.informedHumanOfHandoverStart  time=250  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.responding -> human.setGPL {time < (timeMax-10); humanReady!; time:=time+10}
+robot.informedHumanOfHandoverStart -> robot.waitForGPLUpdate {0; humanReady?; 0}
+
+State:
+human.setGPL  g.start  p.start  l.start  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.setGPL -> human.onTask {0; setv!; 0}
+g.start -> g.set {0; setv?; 0}
+p.start -> p.set {0; setv?; 0}
+l.start -> l.set {0; setv?; 0}
+
+State:
+human.onTask  g.set  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.set -> g.select {0; 0; next_gaze:=rand_v}
+
+State:
+human.onTask  g.select  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=0  pressure=0  tlocation=0  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.select -> g.gazeOk {next_gaze==0; 0; gaze:=true,setg:=true,h_undefGaze:=false}
+
+State:
+human.onTask  g.gazeOk  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.set -> p.select {0; 0; next_pressure:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.select  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.select -> p.pressureOk {next_pressure==0; 0; pressure:=true,setp:=true,h_undefPress:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.set -> l.select {0; 0; next_location:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.select  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.select -> l.locationOk {next_location==0; 0; tlocation:=true,setl:=true,h_undefLoc:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.onTask -> human.count {time < (timeMax) && legc > 0; 0; 0}
+
+State:
+human.count  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.count -> human.leg1 {0; 0; 0}
+
+State:
+human.leg1  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=3  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg1 -> human.leg_do {0; 0; time:=0,s:=0,w:=0,legc:=legc-1,bored:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=0  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.null -> sensors.select1 {setg==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select1  robot.waitForGPLUpdate  time=1  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select1 -> sensors.gazeOkTP {gaze==true; 0; s_gazeOk:=true,s_undefGaze:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.gazeOkTP  robot.waitForGPLUpdate  time=1  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.gazeOkTP -> sensors.select2 {setp==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select2  robot.waitForGPLUpdate  time=1  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select2 -> sensors.pressureOkTP {pressure==true && time < (timeMax-1); 0; s_pressureOk:=true,time:=time+1,s_undefPress:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.pressureOkTP  robot.waitForGPLUpdate  time=2  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.pressureOkTP -> sensors.select3 {setl==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select3  robot.waitForGPLUpdate  time=2  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.select3 -> sensors.locationOkTP {tlocation==true && time < (timeMax-1); 0; s_locationOk:=true,all_sensors:=true,time:=time+1,s_undefLoc:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.waitForGPLUpdate  time=3  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.waitForGPLUpdate -> robot.release {bored==false && s_gazeOk==true && s_pressureOk==true && s_locationOk==true && all_sensors==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.release  time=4  objectReleaseTimer=0  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=0  legc=2  hlegs=1  legno=4  g_legs=0  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.release -> robot.resetTime {time < (timeMax-1) && objectReleaseTimer < (ortMax-1); discardSensors!; time:=time+1,objectReleaseTimer:=objectReleaseTimer+30,released:=true,legs:=legs+1,g_legs:=g_legs+1}
+sensors.locationOkTP -> sensors.resetReadings {0; discardSensors?; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.resetTime  time=5  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=1  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=1  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.resetTime -> robot.waiting {legs < 4; 0; s:=0,x:=0,time:=0,timedout:=false,released:=false,discarded:=false,timedout1:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.waiting  time=0  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=1  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+sensors.resetReadings -> sensors.null {0; finishedSensing!; s_undefGaze:=true,s_undefPress:=true,s_undefLoc:=true,all_sensors:=false}
+g.gazeOk -> g.start {0; finishedSensing?; h_undefGaze:=true,setg:=false}
+p.pressureOk -> p.start {0; finishedSensing?; setp:=false,h_undefPress:=true}
+l.locationOk -> l.start {0; finishedSensing?; setl:=false,h_undefLoc:=true}
+
+State:
+human.leg_do  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=1  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg_do -> human.activatedRobot {time < (timeMax-40); leg!; time:=time+40,hlegs:=hlegs+1}
+robot.waiting -> robot.moveHandToObjectLocation {0; leg?; 0}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToObjectLocation  time=40  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToObjectLocation -> robot.graspObject {time < (timeMax-100); 0; time:=time+100}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.graspObject  time=140  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.graspObject -> robot.moveHandToHandoverLocation {time < (timeMax-50); 0; time:=time+50,released:=false,discarded:=false}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToHandoverLocation  time=190  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToHandoverLocation -> robot.informedHumanOfHandoverStart {time < (timeMax-60); informHumanOfHandoverStart!; time:=time+60}
+human.activatedRobot -> human.responding {0; informHumanOfHandoverStart?; 0}
+
+State:
+human.responding  g.start  p.start  l.start  sensors.null  robot.informedHumanOfHandoverStart  time=250  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.responding -> human.setGPL {time < (timeMax-10); humanReady!; time:=time+10}
+robot.informedHumanOfHandoverStart -> robot.waitForGPLUpdate {0; humanReady?; 0}
+
+State:
+human.setGPL  g.start  p.start  l.start  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.setGPL -> human.onTask {0; setv!; 0}
+g.start -> g.set {0; setv?; 0}
+p.start -> p.set {0; setv?; 0}
+l.start -> l.set {0; setv?; 0}
+
+State:
+human.onTask  g.set  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.set -> g.select {0; 0; next_gaze:=rand_v}
+
+State:
+human.onTask  g.select  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.select -> g.gazeOk {next_gaze==0; 0; gaze:=true,setg:=true,h_undefGaze:=false}
+
+State:
+human.onTask  g.gazeOk  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.set -> p.select {0; 0; next_pressure:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.select  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.select -> p.pressureOk {next_pressure==0; 0; pressure:=true,setp:=true,h_undefPress:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.set -> l.select {0; 0; next_location:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.select  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.select -> l.locationOk {next_location==0; 0; tlocation:=true,setl:=true,h_undefLoc:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.onTask -> human.count {time < (timeMax) && legc > 0; 0; 0}
+
+State:
+human.count  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.count -> human.leg1 {0; 0; 0}
+
+State:
+human.leg1  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=2  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg1 -> human.leg_do {0; 0; time:=0,s:=0,w:=0,legc:=legc-1,bored:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=0  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.null -> sensors.select1 {setg==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select1  robot.waitForGPLUpdate  time=1  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select1 -> sensors.gazeOkTP {gaze==true; 0; s_gazeOk:=true,s_undefGaze:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.gazeOkTP  robot.waitForGPLUpdate  time=1  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.gazeOkTP -> sensors.select2 {setp==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select2  robot.waitForGPLUpdate  time=1  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select2 -> sensors.pressureOkTP {pressure==true && time < (timeMax-1); 0; s_pressureOk:=true,time:=time+1,s_undefPress:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.pressureOkTP  robot.waitForGPLUpdate  time=2  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.pressureOkTP -> sensors.select3 {setl==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select3  robot.waitForGPLUpdate  time=2  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.select3 -> sensors.locationOkTP {tlocation==true && time < (timeMax-1); 0; s_locationOk:=true,all_sensors:=true,time:=time+1,s_undefLoc:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.waitForGPLUpdate  time=3  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.waitForGPLUpdate -> robot.release {bored==false && s_gazeOk==true && s_pressureOk==true && s_locationOk==true && all_sensors==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.release  time=4  objectReleaseTimer=30  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=1  legc=1  hlegs=2  legno=4  g_legs=1  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.release -> robot.resetTime {time < (timeMax-1) && objectReleaseTimer < (ortMax-1); discardSensors!; time:=time+1,objectReleaseTimer:=objectReleaseTimer+30,released:=true,legs:=legs+1,g_legs:=g_legs+1}
+sensors.locationOkTP -> sensors.resetReadings {0; discardSensors?; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.resetTime  time=5  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=2  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=1  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.resetTime -> robot.waiting {legs < 4; 0; s:=0,x:=0,time:=0,timedout:=false,released:=false,discarded:=false,timedout1:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.waiting  time=0  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=2  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+sensors.resetReadings -> sensors.null {0; finishedSensing!; s_undefGaze:=true,s_undefPress:=true,s_undefLoc:=true,all_sensors:=false}
+g.gazeOk -> g.start {0; finishedSensing?; h_undefGaze:=true,setg:=false}
+p.pressureOk -> p.start {0; finishedSensing?; setp:=false,h_undefPress:=true}
+l.locationOk -> l.start {0; finishedSensing?; setl:=false,h_undefLoc:=true}
+
+State:
+human.leg_do  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=2  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg_do -> human.activatedRobot {time < (timeMax-40); leg!; time:=time+40,hlegs:=hlegs+1}
+robot.waiting -> robot.moveHandToObjectLocation {0; leg?; 0}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToObjectLocation  time=40  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToObjectLocation -> robot.graspObject {time < (timeMax-100); 0; time:=time+100}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.graspObject  time=140  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.graspObject -> robot.moveHandToHandoverLocation {time < (timeMax-50); 0; time:=time+50,released:=false,discarded:=false}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToHandoverLocation  time=190  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToHandoverLocation -> robot.informedHumanOfHandoverStart {time < (timeMax-60); informHumanOfHandoverStart!; time:=time+60}
+human.activatedRobot -> human.responding {0; informHumanOfHandoverStart?; 0}
+
+State:
+human.responding  g.start  p.start  l.start  sensors.null  robot.informedHumanOfHandoverStart  time=250  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.responding -> human.setGPL {time < (timeMax-10); humanReady!; time:=time+10}
+robot.informedHumanOfHandoverStart -> robot.waitForGPLUpdate {0; humanReady?; 0}
+
+State:
+human.setGPL  g.start  p.start  l.start  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.setGPL -> human.onTask {0; setv!; 0}
+g.start -> g.set {0; setv?; 0}
+p.start -> p.set {0; setv?; 0}
+l.start -> l.set {0; setv?; 0}
+
+State:
+human.onTask  g.set  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.set -> g.select {0; 0; next_gaze:=rand_v}
+
+State:
+human.onTask  g.select  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.select -> g.gazeOk {next_gaze==0; 0; gaze:=true,setg:=true,h_undefGaze:=false}
+
+State:
+human.onTask  g.gazeOk  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.set -> p.select {0; 0; next_pressure:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.select  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.select -> p.pressureOk {next_pressure==0; 0; pressure:=true,setp:=true,h_undefPress:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.set  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.set -> l.select {0; 0; next_location:=rand_v}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.select  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.select -> l.locationOk {next_location==0; 0; tlocation:=true,setl:=true,h_undefLoc:=false}
+
+State:
+human.onTask  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.onTask -> human.count {time < (timeMax) && legc > 0; 0; 0}
+
+State:
+human.count  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.count -> human.leg1 {0; 0; 0}
+
+State:
+human.leg1  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=260  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=1  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg1 -> human.leg_do {0; 0; time:=0,s:=0,w:=0,legc:=legc-1,bored:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.null  robot.waitForGPLUpdate  time=0  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.null -> sensors.select1 {setg==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select1  robot.waitForGPLUpdate  time=1  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select1 -> sensors.gazeOkTP {gaze==true; 0; s_gazeOk:=true,s_undefGaze:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.gazeOkTP  robot.waitForGPLUpdate  time=1  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.gazeOkTP -> sensors.select2 {setp==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select2  robot.waitForGPLUpdate  time=1  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select2 -> sensors.pressureOkTP {pressure==true && time < (timeMax-1); 0; s_pressureOk:=true,time:=time+1,s_undefPress:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.pressureOkTP  robot.waitForGPLUpdate  time=2  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.pressureOkTP -> sensors.select3 {setl==true; 0; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.select3  robot.waitForGPLUpdate  time=2  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.select3 -> sensors.locationOkTP {tlocation==true && time < (timeMax-1); 0; s_locationOk:=true,all_sensors:=true,time:=time+1,s_undefLoc:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.waitForGPLUpdate  time=3  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.waitForGPLUpdate -> robot.release {bored==false && s_gazeOk==true && s_pressureOk==true && s_locationOk==true && all_sensors==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.locationOkTP  robot.release  time=4  objectReleaseTimer=60  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=2  legc=0  hlegs=3  legno=4  g_legs=2  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.release -> robot.resetTime {time < (timeMax-1) && objectReleaseTimer < (ortMax-1); discardSensors!; time:=time+1,objectReleaseTimer:=objectReleaseTimer+30,released:=true,legs:=legs+1,g_legs:=g_legs+1}
+sensors.locationOkTP -> sensors.resetReadings {0; discardSensors?; 0}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.resetTime  time=5  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=3  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=1  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.resetTime -> robot.waiting {legs < 4; 0; s:=0,x:=0,time:=0,timedout:=false,released:=false,discarded:=false,timedout1:=false}
+
+State:
+human.leg_do  g.gazeOk  p.pressureOk  l.locationOk  sensors.resetReadings  robot.waiting  time=0  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=3  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+sensors.resetReadings -> sensors.null {0; finishedSensing!; s_undefGaze:=true,s_undefPress:=true,s_undefLoc:=true,all_sensors:=false}
+g.gazeOk -> g.start {0; finishedSensing?; h_undefGaze:=true,setg:=false}
+p.pressureOk -> p.start {0; finishedSensing?; setp:=false,h_undefPress:=true}
+l.locationOk -> l.start {0; finishedSensing?; setl:=false,h_undefLoc:=true}
+
+State:
+human.leg_do  g.start  p.start  l.start  sensors.null  robot.waiting  time=0  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=3  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.waiting -> robot.waiting {time < (timeMax-1) && s < loopMax; 0; time:=time+1}
+
+State:
+human.leg_do  g.start  p.start  l.start  sensors.null  robot.waiting  time=1  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=3  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.leg_do -> human.activatedRobot {time < (timeMax-40); leg!; time:=time+40,hlegs:=hlegs+1}
+robot.waiting -> robot.moveHandToObjectLocation {0; leg?; 0}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToObjectLocation  time=41  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToObjectLocation -> robot.graspObject {time < (timeMax-100); 0; time:=time+100}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.graspObject  time=141  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.graspObject -> robot.moveHandToHandoverLocation {time < (timeMax-50); 0; time:=time+50,released:=false,discarded:=false}
+
+State:
+human.activatedRobot  g.start  p.start  l.start  sensors.null  robot.moveHandToHandoverLocation  time=191  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+robot.moveHandToHandoverLocation -> robot.informedHumanOfHandoverStart {time < (timeMax-60); informHumanOfHandoverStart!; time:=time+60}
+human.activatedRobot -> human.responding {0; informHumanOfHandoverStart?; 0}
+
+State:
+human.responding  g.start  p.start  l.start  sensors.null  robot.informedHumanOfHandoverStart  time=251  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.responding -> human.setGPL {time < (timeMax-10); humanReady!; time:=time+10}
+robot.informedHumanOfHandoverStart -> robot.waitForGPLUpdate {0; humanReady?; 0}
+
+State:
+human.setGPL  g.start  p.start  l.start  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.setGPL -> human.onTask {0; setv!; 0}
+g.start -> g.set {0; setv?; 0}
+p.start -> p.set {0; setv?; 0}
+l.start -> l.set {0; setv?; 0}
+
+State:
+human.onTask  g.set  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=0  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.set -> g.select {0; 0; next_gaze:=rand_v}
+
+State:
+human.onTask  g.select  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=1  pressure=1  tlocation=1  h_undefGaze=1  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=0  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+g.select -> g.gazeNotOk {next_gaze==1; 0; gaze:=false,setg:=true,h_undefGaze:=false}
+
+State:
+human.onTask  g.gazeNotOk  p.set  l.set  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=0  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.set -> p.select {0; 0; next_pressure:=rand_v}
+
+State:
+human.onTask  g.gazeNotOk  p.select  l.set  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=1  tlocation=1  h_undefGaze=0  h_undefPress=1  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=0  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+p.select -> p.pressureNotOk {next_pressure==1; 0; pressure:=false,setp:=true,h_undefPress:=false}
+
+State:
+human.onTask  g.gazeNotOk  p.pressureNotOk  l.set  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=0  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.set -> l.select {0; 0; next_location:=rand_v}
+
+State:
+human.onTask  g.gazeNotOk  p.pressureNotOk  l.select  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=1  h_undefGaze=0  h_undefPress=0  h_undefLoc=1  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=0  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+l.select -> l.locationNotOk {next_location==1; 0; tlocation:=false,setl:=true,h_undefLoc:=false}
+
+State:
+human.onTask  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+human.onTask -> human.interactionDone {time < (timeMax) && legc < =0; 0; 0}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.null  robot.waitForGPLUpdate  time=261  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.null -> sensors.select1 {setg==true && time < (timeMax-1); 0; time:=time+1}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.select1  robot.waitForGPLUpdate  time=262  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=1  s_pressureOk=1  s_locationOk=1  s_undefGaze=1  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select1 -> sensors.gazeNotOKTN {gaze==false; 0; s_gazeOk:=false,s_undefGaze:=false}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.gazeNotOKTN  robot.waitForGPLUpdate  time=262  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.gazeNotOKTN -> sensors.select2 {setp==true; 0; 0}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.select2  robot.waitForGPLUpdate  time=262  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=1  s_locationOk=1  s_undefGaze=0  s_undefPress=1  s_undefLoc=1  
+
+Transitions:
+sensors.select2 -> sensors.pressureNotOKTN {pressure==false && time < (timeMax-1); 0; s_pressureOk:=false,time:=time+1,s_undefPress:=false}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.pressureNotOKTN  robot.waitForGPLUpdate  time=263  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.pressureNotOKTN -> sensors.select3 {setl==true; 0; 0}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.select3  robot.waitForGPLUpdate  time=263  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=0  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=1  s_undefGaze=0  s_undefPress=0  s_undefLoc=1  
+
+Transitions:
+sensors.select3 -> sensors.locationNotOkTN {tlocation==false && time < (timeMax-1); 0; s_locationOk:=false,all_sensors:=true,time:=time+1,s_undefLoc:=false}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.locationNotOkTN  robot.waitForGPLUpdate  time=264  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.waitForGPLUpdate -> robot.discard {bored==true||(((s_gazeOk==false||s_pressureOk==false||s_locationOk==false) && all_sensors==true) && time < (timeMax-1)); 0; time:=time+1}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.locationNotOkTN  robot.discard  time=265  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=3  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=0  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.discard -> robot.resetTime {time < (timeMax-1); discardSensors!; time:=time+1,legs:=legs+1,discarded:=true}
+sensors.locationNotOkTN -> sensors.resetReadings {0; discardSensors?; 0}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.resetReadings  robot.resetTime  time=266  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=4  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=1  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  
+
+Transitions:
+robot.resetTime -> robot.tableDone {legs > =4; 0; 0}
+
+State:
+human.interactionDone  g.gazeNotOk  p.pressureNotOk  l.locationNotOk  sensors.resetReadings  robot.tableDone  time=266  objectReleaseTimer=90  next_gaze=1  next_pressure=1  next_location=1  gsensorerror=0  psensorerror=0  lsensorerror=0  sel1=0  sel2=0  legs=4  legc=0  hlegs=4  legno=4  g_legs=3  gaze=0  pressure=0  tlocation=0  h_undefGaze=0  h_undefPress=0  h_undefLoc=0  bored=0  timedout=0  timedout1=0  setg=1  setp=1  setl=1  all_sensors=1  gplWasOk=0  released=0  discarded=1  s_sensorsSet=0  s_gazeOk=0  s_pressureOk=0  s_locationOk=0  s_undefGaze=0  s_undefPress=0  s_undefLoc=0  

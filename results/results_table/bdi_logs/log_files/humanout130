@@ -1,0 +1,3 @@
+[INFO] [WallTime: 1470715443.062993] [0.000000] State machine starting in initial state 'SendA10' with userdata: 
+	[]
+[INFO] [WallTime: 1470715466.999959] [14877.593000] State machine terminating 'SendA10':'outcome1':'end'

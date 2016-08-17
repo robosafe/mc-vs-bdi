@@ -1,0 +1,106 @@
+[INFO] [WallTime: 1470696986.508265] [0.000000] State machine starting in initial state 'Reset' with userdata: 
+	[]
+[0m[ INFO] [1470696987.098571156, 10331.635000000]: Loading robot model 'bert2'...[0m
+[0m[ INFO] [1470696987.099617876, 10331.636000000]: No root joint specified. Assuming fixed joint[0m
+[0m[ INFO] [1470696994.224264685, 10333.665000000]: Loading robot model 'bert2'...[0m
+[0m[ INFO] [1470696994.224809863, 10333.665000000]: No root joint specified. Assuming fixed joint[0m
+[0m[ INFO] [1470696996.434686483, 10334.337000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470697014.577353] [10339.330000] State machine transitioning 'Reset':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470697014.901935] [10339.388000] State machine transitioning 'Receive1':'outcome2'-->'Receive1'
+[INFO] [WallTime: 1470697014.976640] [10339.439000] State machine transitioning 'Receive1':'outcome2'-->'Receive1'
+[INFO] [WallTime: 1470697015.172536] [10339.489000] State machine transitioning 'Receive1':'outcome2'-->'Receive1'
+[INFO] [WallTime: 1470697015.346382] [10339.545000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470697016.662619234, 10339.933000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697030.016603042, 10343.758000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697037.085022151, 10345.356000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697055.850525868, 10349.723000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470697067.154776] [10352.335000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470697072.467081] [10354.012000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470697072.566919] [10354.062000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697072.903569] [10354.128000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697072.983160] [10354.181000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697073.213374] [10354.235000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697073.422158] [10354.285000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697073.651501] [10354.354000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697073.830431] [10354.408000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.050364] [10354.461000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.242706] [10354.512000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.401981] [10354.567000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.561054] [10354.617000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.767053] [10354.683000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697074.978846] [10354.744000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697075.166996] [10354.803000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697075.373358] [10354.853000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697075.597747] [10354.905000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697075.777120] [10354.958000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697075.970134] [10355.009000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697076.215708] [10355.070000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697076.425437] [10355.126000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697076.666303] [10355.180000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697076.855065] [10355.235000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697077.068428] [10355.288000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697077.381714] [10355.352000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697077.585353] [10355.402000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697077.818845] [10355.454000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697078.095524] [10355.514000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697078.379114] [10355.566000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697078.655312] [10355.622000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697078.931719] [10355.681000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697079.190879] [10355.736000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697079.448813] [10355.786000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697079.743990] [10355.836000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697079.955510] [10355.887000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697080.259982] [10355.944000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697080.519194] [10355.999000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697080.782848] [10356.057000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697081.021995] [10356.107000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697081.311704] [10356.159000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697081.597566] [10356.209000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697082.012620] [10356.276000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697082.250453] [10356.326000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697082.535990] [10356.392000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697082.709500] [10356.442000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697083.014113] [10356.497000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697083.277613] [10356.547000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697083.570352] [10356.600000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697083.850987] [10356.652000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697084.092070] [10356.708000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697084.234230] [10356.760000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697084.571692] [10356.833000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697084.860969] [10356.888000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697085.107176] [10356.943000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697085.340542] [10356.998000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697085.572383] [10357.051000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697085.844406] [10357.123000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697086.121316] [10357.184000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697086.377746] [10357.246000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697086.566410] [10357.299000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+[INFO] [WallTime: 1470697086.726773] [10357.349000] State machine transitioning 'Receive2':'outcome2'-->'Receive2'
+Timed out
+[INFO] [WallTime: 1470697086.901650] [10357.401000] State machine transitioning 'Receive2':'outcome3'-->'Timeout2'
+Robot timed out
+[INFO] [WallTime: 1470697086.906271] [10357.401000] State machine transitioning 'Timeout2':'outcome1'-->'Discard'
+[INFO] [WallTime: 1470697093.232738] [10359.262000] State machine transitioning 'Discard':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470697093.452447] [10359.323000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470697094.848213827, 10359.673000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697102.302114690, 10361.522000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697109.581435037, 10363.516000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697126.786912231, 10367.777000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470697136.734471] [10370.266000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470697142.627659] [10371.890000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470697148.469886] [10372.953000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'
+[INFO] [WallTime: 1470697158.551776] [10374.961000] State machine transitioning 'Wait0':'outcome1'-->'Sensing'
+[INFO] [WallTime: 1470697158.647737] [10374.980000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470697158.736550] [10374.990000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470697158.844007] [10375.000000] State machine transitioning 'Sensing':'outcome1'-->'Decide'
+GPL is not OK
+[INFO] [WallTime: 1470697160.317911] [10375.302000] State machine transitioning 'Decide':'outcome2'-->'Discard'
+[INFO] [WallTime: 1470697168.782308] [10377.225000] State machine transitioning 'Discard':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470697169.031916] [10377.276000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470697171.046483729, 10377.678000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697179.696994902, 10379.458000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697189.782610704, 10381.478000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470697212.046368355, 10385.731000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470697226.624721] [10388.714000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470697235.029720] [10390.330000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470697239.129724] [10391.389000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'

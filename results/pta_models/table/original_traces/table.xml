@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+broadcast chan leg;
+broadcast chan informHumanOfHandoverStart;
+broadcast chan humanReady;
+broadcast chan senseGaze;
+broadcast chan sensePressure;
+broadcast chan senseLocation;
+broadcast chan setv;
+broadcast chan finishedSensing;
+broadcast chan discardSensors;
+
+int time=0;
+int objectReleaseTimer=0;
+
+//Limits of timers in human;
+const int MAXclk_Humantiredbored = 200; //5 s
+
+// Limits of timers in robot
+const int MAXclk_GPL_Timeout = 50; //2.5 s
+const int MAXclk_GPLBad_I_Timeout = 50; //2.5 s
+const int MAXclk_GPLOk_I_Timeout = 50; //2.5 s
+const int timeMax = 1000; //50 s
+const int ortMax = 200; //10 s
+const int loopMax = 300; //15 s
+
+//variables for the non-deterministic decision making
+int next_gaze=0; //Human conditions
+int next_pressure=0;
+int next_location=0;
+int gsensorerror=0; //False negatives or positivess
+int psensorerror=0;
+int lsensorerror=0;
+int sel1=0;
+int sel2=0;
+int legs=0; //Count legs robot processed
+int legc=0; //Original leg ask
+int hlegs; //Count legs human processed
+int legno=0; 
+int g_legs=0; //Number of successfully released legs
+
+//Flags
+// For setting
+bool gaze=false;
+bool pressure=false;
+bool tlocation=false;
+bool h_undefGaze=true;
+bool h_undefPress=true;
+bool h_undefLoc=true;
+bool bored=false;
+bool timedout=false;
+bool timedout1=false;
+
+//For sensing
+bool setg=false;
+bool setp=false;
+bool setl=false;
+bool all_sensors=false;
+bool gplWasOk=false;
+bool released=false;
+bool discarded=false;
+
+//For acting
+bool s_sensorsSet=false;
+bool s_gazeOk=false;
+bool s_pressureOk=false;
+bool s_locationOk=false;
+bool s_undefGaze=true;
+bool s_undefPress=true;
+bool s_undefLoc=true;
+
+</declaration>
+	<template>
+		<name>human</name>
+		<declaration>clock w; //Human tired or bored, internal
+clock s; //Receive signal timer</declaration>
+		<location id="id0" x="-765" y="119">
+			<name x="-799" y="136">leg2</name>
+			<committed/>
+		</location>
+		<location id="id1" x="-731" y="8">
+			<name x="-741" y="-26">leg1</name>
+			<committed/>
+		</location>
+		<location id="id2" x="-680" y="357">
+			<name x="-690" y="323">leg4</name>
+			<committed/>
+		</location>
+		<location id="id3" x="-714" y="246">
+			<name x="-724" y="212">leg3</name>
+			<committed/>
+		</location>
+		<location id="id4" x="-637" y="178">
+			<name x="-647" y="144">count</name>
+			<committed/>
+		</location>
+		<location id="id5" x="-688" y="-144">
+			<name x="-698" y="-178">leg0</name>
+		</location>
+		<location id="id6" x="-799" y="8">
+			<name x="-809" y="-26">temp</name>
+			<committed/>
+		</location>
+		<location id="id7" x="-909" y="8">
+			<name x="-919" y="-26">start</name>
+		</location>
+		<location id="id8" x="-281" y="-85">
+			<name x="-291" y="-119">tick1</name>
+			<committed/>
+		</location>
+		<location id="id9" x="824" y="8">
+			<name x="814" y="-26">interactionDone</name>
+		</location>
+		<location id="id10" x="595" y="8">
+			<name x="578" y="34">tired_bored</name>
+		</location>
+		<location id="id11" x="306" y="8">
+			<name x="280" y="25">onTask</name>
+		</location>
+		<location id="id12" x="-416" y="8">
+			<name x="-484" y="25">activatedRobot</name>
+		</location>
+		<location id="id13" x="-637" y="8">
+			<name x="-647" y="-26">leg_do</name>
+		</location>
+		<location id="id14" x="-153" y="8">
+			<name x="-178" y="-26">responding</name>
+		</location>
+		<location id="id15" x="94" y="8">
+			<name x="69" y="-26">setGPL</name>
+		</location>
+		<init ref="id7"/>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id10"/>
+			<label kind="guard" x="-119" y="-110">w&gt;=MAXclk_Humantiredbored</label>
+			<label kind="assignment" x="-44" y="-131">bored:=true</label>
+			<nail x="101" y="-123"/>
+			<nail x="644" y="-131"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id4"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id2"/>
+			<label kind="guard" x="-909" y="76">legno==4</label>
+			<label kind="assignment" x="-909" y="110">legc:=4</label>
+			<nail x="-927" y="174"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-823" y="144">legno==3</label>
+			<label kind="assignment" x="-823" y="178">legc:=3</label>
+			<nail x="-841" y="102"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-280" y="42">time&lt;(timeMax)&amp;&amp;legc&gt;0</label>
+			<nail x="-518" y="110"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-476" y="119">time&lt;(timeMax-1)&amp;&amp;legc&gt;0</label>
+			<label kind="assignment" x="-619" y="93">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id1"/>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id4"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-824" y="68">legno==2</label>
+			<label kind="assignment" x="-807" y="85">legc:=2</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-781" y="-26">legno==1</label>
+			<label kind="assignment" x="-790" y="17">legc:=1</label>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id13"/>
+			<label kind="assignment" x="-748" y="34">time:=0,s:=0,w:=0,legc:=legc-1,bored:=false</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id9"/>
+			<label kind="assignment" x="-629" y="-136">time:=time+60</label>
+			<nail x="731" y="-153"/>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id5"/>
+			<label kind="guard" x="-781" y="-102">legno==0</label>
+			<label kind="assignment" x="-781" y="-68">time:=0</label>
+		</transition>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id6"/>
+			<label kind="select" x="-891" y="-43">rand_v:int[0,4]</label>
+			<label kind="assignment" x="-901" y="25">legno:=rand_v,hlegs:=0</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id9"/>
+			<label kind="guard" x="399" y="85">time&lt;(timeMax)&amp;&amp;legc&lt;=0</label>
+			<nail x="408" y="76"/>
+			<nail x="748" y="76"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id11"/>
+			<label kind="guard" x="263" y="-119">time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="272" y="-102">time:=time+1</label>
+			<nail x="262" y="-76"/>
+			<nail x="390" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id9"/>
+			<label kind="guard" x="612" y="-17">time&lt;(timeMax-1)&amp;&amp;legc&lt;=0</label>
+			<label kind="assignment" x="671" y="17">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id15"/>
+			<label kind="guard" x="-76" y="-17">time&lt;(timeMax-10)</label>
+			<label kind="synchronisation" x="-76" y="-42">humanReady!</label>
+			<label kind="assignment" x="-51" y="8">time:=time+10</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id12"/>
+			<label kind="guard" x="-595" y="-25">time&lt;(timeMax-40)</label>
+			<label kind="synchronisation" x="-586" y="-8">leg!</label>
+			<label kind="assignment" x="-561" y="8">time:=time+40,hlegs:=hlegs+1</label>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id14"/>
+			<label kind="synchronisation" x="-391" y="-8">informHumanOfHandoverStart?</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id12"/>
+			<nail x="-425" y="-93"/>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-400" y="-59">time&lt;(timeMax-1)&amp;&amp;w&lt;MAXclk_Humantiredbored</label>
+			<label kind="assignment" x="-391" y="-42">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id11"/>
+			<label kind="synchronisation" x="178" y="-17">setv!</label>
+		</transition>
+	</template>
+	<template>
+		<name>g</name>
+		<location id="id16" x="-34" y="17">
+			<name x="-17" y="-8">select</name>
+			<committed/>
+		</location>
+		<location id="id17" x="-238" y="17">
+			<name x="-248" y="-17">set</name>
+			<committed/>
+		</location>
+		<location id="id18" x="34" y="119">
+			<name x="-17" y="136">gazeNotOk</name>
+		</location>
+		<location id="id19" x="34" y="-93">
+			<name x="24" y="-127">gazeOk</name>
+		</location>
+		<location id="id20" x="-391" y="17">
+			<name x="-401" y="-17">start</name>
+		</location>
+		<init ref="id20"/>
+		<transition>
+			<source ref="id18"/>
+			<target ref="id20"/>
+			<label kind="synchronisation" x="-305" y="114">finishedSensing?</label>
+			<label kind="assignment" x="-306" y="144">h_undefGaze:=true,setg:=false</label>
+			<nail x="-323" y="144"/>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id20"/>
+			<label kind="synchronisation" x="-323" y="-110">finishedSensing?</label>
+			<label kind="assignment" x="-331" y="-144">h_undefGaze:=true,setg:=false</label>
+			<nail x="-340" y="-127"/>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id18"/>
+			<label kind="guard" x="-136" y="59">next_gaze==1</label>
+			<label kind="assignment" x="-110" y="76">gaze:=false,setg:=true,h_undefGaze:=false</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id19"/>
+			<label kind="guard" x="-119" y="-85">next_gaze==0</label>
+			<label kind="assignment" x="-204" y="-68">gaze:=true,setg:=true,h_undefGaze:=false</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id16"/>
+			<label kind="select" x="-195" y="-8">rand_v:int[0,1]</label>
+			<label kind="assignment" x="-204" y="17">next_gaze:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id17"/>
+			<label kind="synchronisation" x="-297" y="0">setv?</label>
+		</transition>
+	</template>
+	<template>
+		<name>p</name>
+		<location id="id21" x="68" y="51">
+			<name x="58" y="17">select</name>
+			<committed/>
+		</location>
+		<location id="id22" x="-289" y="51">
+			<name x="-299" y="17">start</name>
+		</location>
+		<location id="id23" x="-119" y="51">
+			<name x="-129" y="17">set</name>
+			<committed/>
+		</location>
+		<location id="id24" x="144" y="144">
+			<name x="91" y="161">pressureNotOk</name>
+		</location>
+		<location id="id25" x="144" y="-59">
+			<name x="134" y="-93">pressureOk</name>
+		</location>
+		<init ref="id22"/>
+		<transition>
+			<source ref="id24"/>
+			<target ref="id22"/>
+			<label kind="synchronisation" x="-228" y="144">finishedSensing?</label>
+			<label kind="assignment" x="-228" y="161">setp:=false,h_undefPress:=true</label>
+			<nail x="-246" y="178"/>
+		</transition>
+		<transition>
+			<source ref="id25"/>
+			<target ref="id22"/>
+			<label kind="synchronisation" x="-245" y="-97">finishedSensing?</label>
+			<label kind="assignment" x="-245" y="-80">setp:=false,h_undefPress:=true</label>
+			<nail x="-263" y="-102"/>
+		</transition>
+		<transition>
+			<source ref="id23"/>
+			<target ref="id21"/>
+			<label kind="select" x="-76" y="25">rand_v:int[0,1]</label>
+			<label kind="assignment" x="-102" y="59">next_pressure:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id24"/>
+			<label kind="guard" x="-34" y="102">next_pressure==1</label>
+			<label kind="assignment" x="0" y="119">pressure:=false,setp:=true,h_undefPress:=false</label>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id25"/>
+			<label kind="guard" x="-17" y="-59">next_pressure==0</label>
+			<label kind="assignment" x="-102" y="-42">pressure:=true,setp:=true,h_undefPress:=false</label>
+		</transition>
+		<transition>
+			<source ref="id22"/>
+			<target ref="id23"/>
+			<label kind="synchronisation" x="-178" y="34">setv?</label>
+		</transition>
+	</template>
+	<template>
+		<name>l</name>
+		<location id="id26" x="-374" y="0">
+			<name x="-384" y="-34">start</name>
+		</location>
+		<location id="id27" x="110" y="76">
+			<name x="58" y="93">locationNotOk</name>
+		</location>
+		<location id="id28" x="110" y="-102">
+			<name x="100" y="-136">locationOk</name>
+		</location>
+		<location id="id29" x="-195" y="0">
+			<name x="-205" y="-34">set</name>
+			<committed/>
+		</location>
+		<location id="id30" x="51" y="0">
+			<name x="41" y="-34">select</name>
+			<committed/>
+		</location>
+		<init ref="id26"/>
+		<transition>
+			<source ref="id27"/>
+			<target ref="id26"/>
+			<label kind="synchronisation" x="-339" y="80">finishedSensing?</label>
+			<label kind="assignment" x="-339" y="97">setl:=false,h_undefLoc:=true</label>
+			<nail x="-357" y="119"/>
+		</transition>
+		<transition>
+			<source ref="id28"/>
+			<target ref="id26"/>
+			<label kind="synchronisation" x="-347" y="-148">finishedSensing?</label>
+			<label kind="assignment" x="-347" y="-131">setl:=false,h_undefLoc:=true</label>
+			<nail x="-365" y="-161"/>
+		</transition>
+		<transition>
+			<source ref="id30"/>
+			<target ref="id27"/>
+			<label kind="guard" x="-103" y="76">next_location==1</label>
+			<label kind="assignment" x="-17" y="51">tlocation:=false,setl:=true,h_undefLoc:=false</label>
+		</transition>
+		<transition>
+			<source ref="id29"/>
+			<target ref="id30"/>
+			<label kind="select" x="-127" y="-17">rand_v:int[0,1]</label>
+			<label kind="assignment" x="-153" y="0">next_location:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id30"/>
+			<target ref="id28"/>
+			<label kind="guard" x="-34" y="-110">next_location==0</label>
+			<label kind="assignment" x="-119" y="-93">tlocation:=true,setl:=true,h_undefLoc:=false</label>
+		</transition>
+		<transition>
+			<source ref="id26"/>
+			<target ref="id29"/>
+			<label kind="synchronisation" x="-270" y="-17">setv?</label>
+		</transition>
+	</template>
+	<template>
+		<name>sensors</name>
+		<location id="id31" x="1496" y="-51">
+			<name x="1486" y="-85">resetReadings</name>
+			<committed/>
+		</location>
+		<location id="id32" x="373" y="111">
+			<name x="314" y="127">gazeNotOKTN</name>
+			<committed/>
+		</location>
+		<location id="id33" x="212" y="17">
+			<name x="202" y="-17">select1</name>
+			<committed/>
+		</location>
+		<location id="id34" x="374" y="-170">
+			<name x="331" y="-204">gazeOkTP</name>
+			<committed/>
+		</location>
+		<location id="id35" x="-110" y="17">
+			<name x="-120" y="-17">null</name>
+		</location>
+		<location id="id36" x="814" y="115">
+			<name x="748" y="85">pressureNotOKTN</name>
+			<committed/>
+		</location>
+		<location id="id37" x="612" y="25">
+			<name x="602" y="-9">select2</name>
+			<committed/>
+		</location>
+		<location id="id38" x="816" y="-170">
+			<name x="773" y="-204">pressureOkTP</name>
+			<committed/>
+		</location>
+		<location id="id39" x="1224" y="110">
+			<name x="1214" y="76">locationNotOkTN</name>
+		</location>
+		<location id="id40" x="1232" y="-187">
+			<name x="1213" y="-221">locationOkTP</name>
+		</location>
+		<location id="id41" x="1054" y="25">
+			<name x="1029" y="-17">select3</name>
+			<committed/>
+		</location>
+		<init ref="id35"/>
+		<transition>
+			<source ref="id31"/>
+			<target ref="id35"/>
+			<label kind="synchronisation" x="-41" y="-318">finishedSensing!</label>
+			<label kind="assignment" x="-25" y="-289">s_undefGaze:=true,s_undefPress:=true,s_undefLoc:=true,all_sensors:=false</label>
+			<nail x="1462" y="-306"/>
+			<nail x="-59" y="-297"/>
+		</transition>
+		<transition>
+			<source ref="id39"/>
+			<target ref="id31"/>
+			<label kind="synchronisation" x="1326" y="-8">discardSensors?</label>
+		</transition>
+		<transition>
+			<source ref="id40"/>
+			<target ref="id31"/>
+			<label kind="synchronisation" x="1326" y="-161">discardSensors?</label>
+		</transition>
+		<transition>
+			<source ref="id36"/>
+			<target ref="id41"/>
+			<label kind="guard" x="918" y="25">setl==true</label>
+		</transition>
+		<transition>
+			<source ref="id38"/>
+			<target ref="id41"/>
+			<label kind="guard" x="850" y="-136">setl==true</label>
+		</transition>
+		<transition>
+			<source ref="id34"/>
+			<target ref="id37"/>
+			<label kind="guard" x="450" y="-119">setp==true</label>
+		</transition>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id37"/>
+			<label kind="guard" x="450" y="25">setp==true</label>
+		</transition>
+		<transition>
+			<source ref="id35"/>
+			<target ref="id33"/>
+			<label kind="guard" x="-68" y="-17">setg==true&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="-51" y="25">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id33"/>
+			<target ref="id32"/>
+			<label kind="guard" x="144" y="51">gaze==false</label>
+			<label kind="assignment" x="232" y="64">s_gazeOk:=false,s_undefGaze:=false</label>
+		</transition>
+		<transition>
+			<source ref="id33"/>
+			<target ref="id34"/>
+			<label kind="guard" x="68" y="-127">gaze==true</label>
+			<label kind="assignment" x="212" y="-110">s_gazeOk:=true,s_undefGaze:=false</label>
+		</transition>
+		<transition>
+			<source ref="id37"/>
+			<target ref="id36"/>
+			<label kind="guard" x="552" y="59">pressure==false&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="544" y="76">s_pressureOk:=false,time:=time+1,s_undefPress:=false</label>
+		</transition>
+		<transition>
+			<source ref="id37"/>
+			<target ref="id38"/>
+			<label kind="guard" x="518" y="-153">pressure==true&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="510" y="-110">s_pressureOk:=true,time:=time+1,s_undefPress:=false</label>
+		</transition>
+		<transition>
+			<source ref="id41"/>
+			<target ref="id39"/>
+			<label kind="guard" x="1045" y="51">tlocation==false&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="1113" y="68">s_locationOk:=false,all_sensors:=true,time:=time+1,s_undefLoc:=false</label>
+		</transition>
+		<transition>
+			<source ref="id41"/>
+			<target ref="id40"/>
+			<label kind="guard" x="1011" y="-144">tlocation==true&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="1011" y="-127">s_locationOk:=true,all_sensors:=true,time:=time+1,s_undefLoc:=false</label>
+		</transition>
+	</template>
+	<template>
+		<name>robot</name>
+		<declaration>clock x; //waitForGPLUpdate timer
+clock y; //GPLOk timer
+clock z; //GLPBad timer
+clock s; //Receive signal timer</declaration>
+		<location id="id42" x="680" y="-297">
+			<name x="670" y="-331">tableDone</name>
+		</location>
+		<location id="id43" x="-892" y="-34">
+			<name x="-902" y="-68">waiting</name>
+		</location>
+		<location id="id44" x="527" y="-323">
+			<name x="517" y="-357">resetTime</name>
+			<committed/>
+		</location>
+		<location id="id45" x="136" y="-34">
+			<name x="76" y="-76">waitForGPLUpdate</name>
+		</location>
+		<location id="id46" x="-17" y="-34">
+			<name x="-136" y="0">informedHumanOfHandoverStart</name>
+		</location>
+		<location id="id47" x="-263" y="-34">
+			<name x="-374" y="-68">moveHandToHandoverLocation</name>
+		</location>
+		<location id="id48" x="-484" y="-34">
+			<name x="-527" y="-76">graspObject</name>
+		</location>
+		<location id="id49" x="-739" y="-34">
+			<name x="-841" y="-76">moveHandToObjectLocation</name>
+		</location>
+		<location id="id50" x="901" y="76">
+			<name x="891" y="42">discard</name>
+		</location>
+		<location id="id51" x="374" y="-119">
+			<name x="364" y="-153">release</name>
+		</location>
+		<location id="id52" x="-1003" y="-34">
+			<name x="-1013" y="-68">reset</name>
+			<committed/>
+		</location>
+		<init ref="id52"/>
+		<transition>
+			<source ref="id46"/>
+			<target ref="id50"/>
+			<label kind="guard" x="-17" y="42">x&gt;=MAXclk_GPL_Timeout&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="1" y="59">time:=time+1,timedout:=true</label>
+			<nail x="408" y="153"/>
+		</transition>
+		<transition>
+			<source ref="id46"/>
+			<target ref="id46"/>
+			<label kind="guard" x="-50" y="-136">time&lt;(timeMax-1)&amp;&amp;x&lt;MAXclk_GPL_Timeout</label>
+			<label kind="assignment" x="-50" y="-102">time:=time+1</label>
+			<nail x="34" y="-102"/>
+			<nail x="-68" y="-102"/>
+		</transition>
+		<transition>
+			<source ref="id44"/>
+			<target ref="id42"/>
+			<label kind="guard" x="578" y="-331">legs&gt;=4</label>
+		</transition>
+		<transition>
+			<source ref="id44"/>
+			<target ref="id43"/>
+			<label kind="guard" x="-390" y="-331">legs&lt;4</label>
+			<label kind="assignment" x="-408" y="-306">s:=0,x:=0,time:=0,timedout:=false,released:=false,discarded:=false,timedout1:=false</label>
+			<nail x="-408" y="-280"/>
+			<nail x="-969" y="-238"/>
+		</transition>
+		<transition>
+			<source ref="id43"/>
+			<target ref="id43"/>
+			<label kind="guard" x="-952" y="25">time&lt;(timeMax-1)&amp;&amp;s&lt;loopMax</label>
+			<label kind="assignment" x="-943" y="42">time:=time+1</label>
+			<nail x="-935" y="17"/>
+			<nail x="-850" y="17"/>
+		</transition>
+		<transition>
+			<source ref="id43"/>
+			<target ref="id44"/>
+			<label kind="guard" x="-943" y="-144">time&lt;(timeMax-300)&amp;&amp;s&gt;=loopMax</label>
+			<label kind="assignment" x="-874" y="-114">time:=time+300,timedout1:=true</label>
+			<nail x="-799" y="-195"/>
+			<nail x="263" y="-289"/>
+		</transition>
+		<transition>
+			<source ref="id52"/>
+			<target ref="id43"/>
+			<label kind="assignment" x="-985" y="-34">legs:=0</label>
+		</transition>
+		<transition>
+			<source ref="id43"/>
+			<target ref="id49"/>
+			<label kind="synchronisation" x="-874" y="-51">leg?</label>
+		</transition>
+		<transition>
+			<source ref="id51"/>
+			<target ref="id44"/>
+			<label kind="guard" x="246" y="-204">time&lt;(timeMax-1)&amp;&amp;objectReleaseTimer&lt;(ortMax-1)</label>
+			<label kind="synchronisation" x="323" y="-229">discardSensors!</label>
+			<label kind="assignment" x="42" y="-178">time:=time+1,objectReleaseTimer:=objectReleaseTimer+30,released:=true,legs:=legs+1,g_legs:=g_legs+1</label>
+		</transition>
+		<transition>
+			<source ref="id48"/>
+			<target ref="id47"/>
+			<label kind="guard" x="-442" y="-51">time&lt;(timeMax-50)</label>
+			<label kind="assignment" x="-544" y="0">time:=time+50,released:=false,discarded:=false</label>
+		</transition>
+		<transition>
+			<source ref="id49"/>
+			<target ref="id48"/>
+			<label kind="guard" x="-671" y="-59">time&lt;(timeMax-100)</label>
+			<label kind="assignment" x="-654" y="-25">time:=time+100</label>
+		</transition>
+		<transition>
+			<source ref="id50"/>
+			<target ref="id44"/>
+			<label kind="guard" x="731" y="-102">time&lt;(timeMax-1)</label>
+			<label kind="synchronisation" x="714" y="-153">discardSensors!</label>
+			<label kind="assignment" x="654" y="-127">time:=time+1,legs:=legs+1,discarded:=true</label>
+		</transition>
+		<transition>
+			<source ref="id45"/>
+			<target ref="id50"/>
+			<label kind="guard" x="144" y="17">bored==true||(((s_gazeOk==false||s_pressureOk==false||s_locationOk==false)&amp;&amp;all_sensors==true)&amp;&amp;time&lt;(timeMax-1))</label>
+			<label kind="assignment" x="773" y="68">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id45"/>
+			<target ref="id51"/>
+			<label kind="guard" x="187" y="-85">bored==false&amp;&amp;s_gazeOk==true&amp;&amp;s_pressureOk==true&amp;&amp;s_locationOk==true&amp;&amp;all_sensors==true&amp;&amp;time&lt;(timeMax-1)</label>
+			<label kind="assignment" x="314" y="-102">time:=time+1</label>
+		</transition>
+		<transition>
+			<source ref="id46"/>
+			<target ref="id45"/>
+			<label kind="synchronisation" x="1" y="-51">humanReady?</label>
+		</transition>
+		<transition>
+			<source ref="id47"/>
+			<target ref="id46"/>
+			<label kind="guard" x="-255" y="-17">time&lt;(timeMax-60)</label>
+			<label kind="synchronisation" x="-246" y="-51">informHumanOfHandoverStart!</label>
+			<label kind="assignment" x="-245" y="-34">time:=time+60</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Human = human();
+Gaze = g();
+Pressure = p();
+Location = l();
+Sensors = sensors();
+Robot = robot();
+
+// List one or more processes to be composed into a system.
+system Human, Gaze, Pressure, Location, Sensors, Robot;
+    </system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt; hlegs==0 and g_legs==0 and timedout1==true and Human.interactionDone
+			</formula>
+			<comment>
+			</comment>
+		</query>
+	</queries>
+</nta>

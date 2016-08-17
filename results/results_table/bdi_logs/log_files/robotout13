@@ -1,0 +1,70 @@
+[INFO] [WallTime: 1470669265.929158] [0.000000] State machine starting in initial state 'Reset' with userdata: 
+	[]
+[0m[ INFO] [1470669266.109574188]: Loading robot model 'bert2'...[0m
+[0m[ INFO] [1470669266.109759422]: No root joint specified. Assuming fixed joint[0m
+[0m[ INFO] [1470669267.546895628, 1827.846000000]: Loading robot model 'bert2'...[0m
+[0m[ INFO] [1470669267.547154332, 1827.846000000]: No root joint specified. Assuming fixed joint[0m
+[0m[ INFO] [1470669268.615699352, 1828.325000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470669280.915703] [1834.109000] State machine transitioning 'Reset':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470669281.027294] [1834.167000] State machine transitioning 'Receive1':'outcome2'-->'Receive1'
+[INFO] [WallTime: 1470669281.146557] [1834.217000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470669282.186435023, 1834.676000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669288.856261876, 1837.822000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669292.573683928, 1839.427000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669301.786275343, 1843.544000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470669307.108504] [1845.780000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470669310.383588] [1847.402000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470669313.531881] [1848.498000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'
+[INFO] [WallTime: 1470669318.290167] [1850.499000] State machine transitioning 'Wait0':'outcome1'-->'Sensing'
+[INFO] [WallTime: 1470669318.326766] [1850.514000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.378618] [1850.528000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.410450] [1850.548000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.416409] [1850.558000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.467337] [1850.570000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.478629] [1850.580000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.496894] [1850.590000] State machine transitioning 'Sensing':'outcome2'-->'Sensing'
+[INFO] [WallTime: 1470669318.545493] [1850.608000] State machine transitioning 'Sensing':'outcome1'-->'Decide'
+GPL is not OK
+[INFO] [WallTime: 1470669319.320162] [1850.913000] State machine transitioning 'Decide':'outcome2'-->'Discard'
+[INFO] [WallTime: 1470669323.813987] [1852.729000] State machine transitioning 'Discard':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470669323.993622] [1852.779000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470669325.031893936, 1853.096000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669329.351642059, 1854.660000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669333.791192881, 1856.265000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669345.155261553, 1860.330000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470669353.410253] [1863.455000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470669357.112855] [1865.065000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470669359.781258] [1866.118000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'
+[INFO] [WallTime: 1470669364.935681] [1868.118000] State machine transitioning 'Wait0':'outcome1'-->'Sensing'
+[INFO] [WallTime: 1470669364.955737] [1868.128000] State machine transitioning 'Sensing':'outcome1'-->'Decide'
+GPL is OK
+[INFO] [WallTime: 1470669365.894662] [1868.433000] State machine transitioning 'Decide':'outcome1'-->'Release'
+Piece is released
+2
+[INFO] [WallTime: 1470669371.596988] [1870.884000] State machine transitioning 'Release':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470669371.786830] [1870.934000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470669372.642676779, 1871.210000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669377.019668236, 1872.979000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669381.114300570, 1874.403000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669392.056127372, 1878.469000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470669398.562977] [1880.893000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470669403.129291] [1882.497000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470669406.184050] [1883.566000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'
+[INFO] [WallTime: 1470669411.346837] [1885.581000] State machine transitioning 'Wait0':'outcome1'-->'Sensing'
+[INFO] [WallTime: 1470669411.363818] [1885.594000] State machine transitioning 'Sensing':'outcome1'-->'Decide'
+GPL is not OK
+[INFO] [WallTime: 1470669412.021155] [1885.896000] State machine transitioning 'Decide':'outcome2'-->'Discard'
+[INFO] [WallTime: 1470669417.112798] [1887.715000] State machine transitioning 'Discard':'outcome1'-->'Receive1'
+[INFO] [WallTime: 1470669417.287556] [1887.766000] State machine transitioning 'Receive1':'outcome1'-->'Move_hand'
+[0m[ INFO] [1470669418.497090688, 1888.127000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669422.510071808, 1889.624000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669426.949783928, 1891.210000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[0m[ INFO] [1470669437.988793082, 1895.316000000]: Ready to take MoveGroup commands for group body_arm.[0m
+[INFO] [WallTime: 1470669444.611343] [1897.544000] State machine transitioning 'Move_hand':'outcome1'-->'Send1'
+[INFO] [WallTime: 1470669448.694460] [1899.151000] State machine transitioning 'Send1':'outcome1'-->'Receive2'
+[INFO] [WallTime: 1470669451.503133] [1900.201000] State machine transitioning 'Receive2':'outcome1'-->'Wait0'
+[INFO] [WallTime: 1470669457.459261] [1902.201000] State machine transitioning 'Wait0':'outcome1'-->'Sensing'
+[INFO] [WallTime: 1470669457.481529] [1902.213000] State machine transitioning 'Sensing':'outcome1'-->'Decide'
+GPL is not OK
+[INFO] [WallTime: 1470669458.644328] [1902.551000] State machine transitioning 'Decide':'outcome2'-->'Discard'
+[INFO] [WallTime: 1470669463.617697] [1904.380000] State machine terminating 'Discard':'outcome2':'tableDone'

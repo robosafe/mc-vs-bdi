@@ -1,0 +1,16 @@
+/* Jason Project */
+
+MAS tiago {	
+
+    infrastructure: Centralised
+
+    environment: Env
+
+    agents:
+		robot_code;
+		human;
+		sensors;
+		dog;
+		meta; 
+}
+

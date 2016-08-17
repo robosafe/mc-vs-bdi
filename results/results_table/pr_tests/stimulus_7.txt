@@ -1,0 +1,7 @@
+set_param gaze = 0
+bored
+tell leg
+set_param gaze = 1
+set_param pressure = 0
+set_param location = 0
+bored

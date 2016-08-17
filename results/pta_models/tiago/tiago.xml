@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>// Place global declarations here.
+broadcast chan order;
+broadcast chan done;
+broadcast chan starting;
+
+int time=0;
+int count_timeouts=0;
+int count_feed=0;
+int count_clean=0;
+
+
+// Limits of timers in robot
+const int MAXclk_Idle = 600; //30 s
+
+//variables for the non-deterministic decision making
+int choose_dog=0; //Dog close
+int chooseact=0; //How many commands to send
+int action=0; //Which command
+
+//Flags
+// For setting
+bool timeout=false;
+bool fridge=false;
+bool sink=false;
+bool clean=false;
+bool feed=false;
+bool whatever=false;
+
+//For sensing
+bool collision=false;
+bool dog_close=false;
+
+//For acting
+int theorder=0; //Sent command
+</declaration>
+	<template>
+		<name x="5" y="5">dog</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-25" y="0">
+			<name x="-25" y="-42">choose</name>
+			<committed/>
+		</location>
+		<location id="id1" x="110" y="68">
+			<name x="100" y="34">farRobot</name>
+		</location>
+		<location id="id2" x="110" y="-51">
+			<name x="100" y="-85">nearRobot</name>
+		</location>
+		<location id="id3" x="-136" y="0">
+			<name x="-146" y="-34">start</name>
+			<committed/>
+		</location>
+		<init ref="id3"/>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<nail x="-8" y="119"/>
+		</transition>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id0"/>
+			<nail x="-51" y="-76"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id0"/>
+			<label kind="synchronisation" x="-118" y="-17">starting?</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="assignment" x="-7" y="34">dog_close:=false</label>
+		</transition>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id2"/>
+			<label kind="assignment" x="25" y="-17">dog_close:=true</label>
+		</transition>
+	</template>
+	<template>
+		<name>human</name>
+		<location id="id4" x="-280" y="433">
+			<name x="-290" y="399">random1</name>
+		</location>
+		<location id="id5" x="442" y="127">
+			<name x="432" y="93">random3</name>
+		</location>
+		<location id="id6" x="93" y="246">
+			<name x="83" y="212">random2</name>
+		</location>
+		<location id="id7" x="646" y="-145">
+			<name x="636" y="-179">ended</name>
+		</location>
+		<location id="id8" x="544" y="-144">
+			<name x="534" y="-178">close_orders</name>
+			<committed/>
+		</location>
+		<location id="id9" x="442" y="34">
+			<name x="432" y="0">feed3</name>
+		</location>
+		<location id="id10" x="442" y="-76">
+			<name x="432" y="-110">clean3</name>
+		</location>
+		<location id="id11" x="442" y="-161">
+			<name x="432" y="-195">sink3</name>
+		</location>
+		<location id="id12" x="442" y="-280">
+			<name x="432" y="-314">fridge3</name>
+		</location>
+		<location id="id13" x="-399" y="-8">
+			<name x="-409" y="-42">choice</name>
+			<committed/>
+		</location>
+		<location id="id14" x="255" y="-204">
+			<name x="178" y="-238">choose_1action</name>
+			<committed/>
+		</location>
+		<location id="id15" x="-578" y="-8">
+			<name x="-595" y="-42">start</name>
+			<committed/>
+		</location>
+		<location id="id16" x="-93" y="-8">
+			<name x="-195" y="-42">choose_2action</name>
+			<committed/>
+		</location>
+		<location id="id17" x="-442" y="119">
+			<name x="-569" y="94">choose_3action</name>
+			<committed/>
+		</location>
+		<location id="id18" x="93" y="161">
+			<name x="83" y="127">feed2</name>
+		</location>
+		<location id="id19" x="85" y="76">
+			<name x="75" y="42">clean2</name>
+		</location>
+		<location id="id20" x="85" y="-17">
+			<name x="75" y="-51">sink2</name>
+		</location>
+		<location id="id21" x="93" y="-110">
+			<name x="83" y="-144">fridge2</name>
+		</location>
+		<location id="id22" x="-272" y="340">
+			<name x="-282" y="306">feed1</name>
+		</location>
+		<location id="id23" x="-280" y="272">
+			<name x="-290" y="238">clean1</name>
+		</location>
+		<location id="id24" x="-272" y="187">
+			<name x="-282" y="153">sink1</name>
+		</location>
+		<location id="id25" x="-272" y="110">
+			<name x="-282" y="76">fridge1</name>
+		</location>
+		<init ref="id15"/>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id5"/>
+			<label kind="guard" x="331" y="25">action==4</label>
+			<label kind="synchronisation" x="348" y="8">order!</label>
+			<label kind="assignment" x="323" y="42">theorder:=5,fridge:=false,sink:=false,clean:=false,feed:=false,whatever:=true</label>
+		</transition>
+		<transition>
+			<source ref="id5"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="467" y="25">done?</label>
+		</transition>
+		<transition>
+			<source ref="id6"/>
+			<target ref="id14"/>
+			<label kind="select" x="127" y="170">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="127" y="153">done?</label>
+			<label kind="assignment" x="127" y="187">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id6"/>
+			<label kind="guard" x="-17" y="187">action==4</label>
+			<label kind="synchronisation" x="0" y="170">order!</label>
+			<label kind="assignment" x="-25" y="204">theorder:=5,fridge:=false,sink:=false,clean:=false,feed:=false,whatever:=true</label>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id16"/>
+			<label kind="select" x="-246" y="323">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="-238" y="297">done?</label>
+			<label kind="assignment" x="-255" y="340">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id4"/>
+			<label kind="guard" x="-374" y="374">action==4</label>
+			<label kind="synchronisation" x="-357" y="357">order!</label>
+			<label kind="assignment" x="-382" y="391">theorder:=5,whatever:=true</label>
+		</transition>
+		<transition>
+			<source ref="id22"/>
+			<target ref="id16"/>
+			<label kind="select" x="-238" y="221">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="-221" y="204">done?</label>
+			<label kind="assignment" x="-238" y="238">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id23"/>
+			<target ref="id16"/>
+			<label kind="select" x="-212" y="153">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="-204" y="136">done?</label>
+			<label kind="assignment" x="-221" y="170">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id24"/>
+			<target ref="id16"/>
+			<label kind="select" x="-255" y="102">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="-221" y="85">done?</label>
+			<label kind="assignment" x="-255" y="119">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id25"/>
+			<target ref="id16"/>
+			<label kind="select" x="-238" y="25">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="-212" y="8">done?</label>
+			<label kind="assignment" x="-246" y="42">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id23"/>
+			<label kind="guard" x="-374" y="229">action==2</label>
+			<label kind="synchronisation" x="-374" y="212">order!</label>
+			<label kind="assignment" x="-382" y="238">theorder:=3,clean:=true</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id22"/>
+			<label kind="guard" x="-382" y="280">action==3</label>
+			<label kind="synchronisation" x="-365" y="263">order!</label>
+			<label kind="assignment" x="-382" y="297">theorder:=4,feed:=true</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id24"/>
+			<label kind="guard" x="-382" y="161">action==1</label>
+			<label kind="synchronisation" x="-374" y="144">order!</label>
+			<label kind="assignment" x="-391" y="178">theorder:=2,sink:=true</label>
+		</transition>
+		<transition>
+			<source ref="id17"/>
+			<target ref="id25"/>
+			<label kind="guard" x="-391" y="102">action==0</label>
+			<label kind="synchronisation" x="-365" y="85">order!</label>
+			<label kind="assignment" x="-374" y="119">theorder:=1,fridge:=true</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id18"/>
+			<label kind="guard" x="-17" y="102">action==3</label>
+			<label kind="synchronisation" x="-8" y="85">order!</label>
+			<label kind="assignment" x="-25" y="119">theorder:=4,fridge:=false,sink:=false,clean:=false,feed:=true,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id19"/>
+			<label kind="guard" x="-34" y="34">action==2</label>
+			<label kind="synchronisation" x="-17" y="17">order!</label>
+			<label kind="assignment" x="-25" y="51">theorder:=3,fridge:=false,sink:=false,clean:=true,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id20"/>
+			<label kind="guard" x="-17" y="-17">action==1</label>
+			<label kind="synchronisation" x="-8" y="-34">order!</label>
+			<label kind="assignment" x="-17" y="0">theorder:=2,fridge:=false,sink:=true,clean:=false,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id16"/>
+			<target ref="id21"/>
+			<label kind="guard" x="-51" y="-93">action==0</label>
+			<label kind="synchronisation" x="-25" y="-110">order!</label>
+			<label kind="assignment" x="-51" y="-76">theorder:=1,fridge:=true,sink:=false,clean:=false,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id18"/>
+			<target ref="id14"/>
+			<label kind="select" x="110" y="59">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="136" y="42">done?</label>
+			<label kind="assignment" x="110" y="85">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id19"/>
+			<target ref="id14"/>
+			<label kind="select" x="119" y="-34">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="127" y="-51">done?</label>
+			<label kind="assignment" x="110" y="-8">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id20"/>
+			<target ref="id14"/>
+			<label kind="select" x="119" y="-110">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="153" y="-127">done?</label>
+			<label kind="assignment" x="110" y="-93">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id21"/>
+			<target ref="id14"/>
+			<label kind="select" x="110" y="-170">rand_v:int[0,4]</label>
+			<label kind="synchronisation" x="153" y="-187">done?</label>
+			<label kind="assignment" x="111" y="-157">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id7"/>
+			<label kind="synchronisation" x="569" y="-162">order!</label>
+			<label kind="assignment" x="552" y="-136">theorder:=0</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="467" y="-59">done?</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="476" y="-127">done?</label>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="459" y="-170">done?</label>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id8"/>
+			<label kind="synchronisation" x="476" y="-238">done?</label>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id9"/>
+			<label kind="guard" x="340" y="-51">action==3</label>
+			<label kind="synchronisation" x="340" y="-68">order!</label>
+			<label kind="assignment" x="340" y="-34">theorder:=4,fridge:=false,sink:=false,clean:=false,feed:=true,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id10"/>
+			<label kind="guard" x="331" y="-136">action==2</label>
+			<label kind="synchronisation" x="331" y="-153">order!</label>
+			<label kind="assignment" x="331" y="-119">theorder:=3,fridge:=false,sink:=false,clean:=true,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id11"/>
+			<label kind="guard" x="314" y="-204">action==1</label>
+			<label kind="synchronisation" x="331" y="-221">order!</label>
+			<label kind="assignment" x="306" y="-187">theorder:=2,fridge:=false,sink:=true,clean:=false,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id14"/>
+			<target ref="id12"/>
+			<label kind="guard" x="323" y="-263">action==0</label>
+			<label kind="synchronisation" x="348" y="-280">order!</label>
+			<label kind="assignment" x="314" y="-246">theorder:=1,fridge:=true,sink:=false,clean:=false,feed:=false,whatever:=false</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id17"/>
+			<label kind="select" x="-433" y="17">rand_v:int[0,4]</label>
+			<label kind="guard" x="-442" y="34">chooseact==2</label>
+			<label kind="assignment" x="-467" y="51">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id16"/>
+			<label kind="select" x="-306" y="-42">rand_v:int[0,4]</label>
+			<label kind="guard" x="-331" y="-25">chooseact==1</label>
+			<label kind="assignment" x="-323" y="-8">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id13"/>
+			<target ref="id14"/>
+			<label kind="select" x="-212" y="-110">rand_v:int[0,4]</label>
+			<label kind="guard" x="-229" y="-127">chooseact==0</label>
+			<label kind="assignment" x="-212" y="-85">action:=rand_v</label>
+		</transition>
+		<transition>
+			<source ref="id15"/>
+			<target ref="id13"/>
+			<label kind="select" x="-535" y="-25">rand_v:int[0,2]</label>
+			<label kind="synchronisation" x="-560" y="-25">starting!</label>
+			<label kind="assignment" x="-544" y="-8">chooseact:=rand_v</label>
+		</transition>
+	</template>
+	<template>
+		<name>robot</name>
+		<location id="id26" x="161" y="144">
+			<name x="151" y="110">toRecharge</name>
+		</location>
+		<location id="id27" x="136" y="25">
+			<name x="126" y="-9">toHuman</name>
+		</location>
+		<location id="id28" x="51" y="-59">
+			<name x="41" y="-93">toSink</name>
+		</location>
+		<location id="id29" x="17" y="-119">
+			<name x="7" y="-153">toFridge</name>
+		</location>
+		<location id="id30" x="8" y="-263">
+			<name x="-2" y="-297">ended</name>
+		</location>
+		<location id="id31" x="-221" y="-59">
+			<name x="-231" y="-93">waitOrder</name>
+			<committed/>
+		</location>
+		<location id="id32" x="-119" y="-59">
+			<name x="-129" y="-93">act</name>
+			<committed/>
+		</location>
+		<location id="id33" x="110" y="221">
+			<name x="127" y="212">recharge</name>
+		</location>
+		<location id="id34" x="357" y="51">
+			<name x="347" y="17">human</name>
+		</location>
+		<location id="id35" x="264" y="-59">
+			<name x="254" y="-93">sink</name>
+		</location>
+		<location id="id36" x="187" y="-178">
+			<name x="177" y="-212">fridge</name>
+		</location>
+		<location id="id37" x="-323" y="-59">
+			<name x="-333" y="-93">start</name>
+			<committed/>
+		</location>
+		<init ref="id37"/>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id31"/>
+			<label kind="guard" x="-306" y="-229">theorder==5</label>
+			<nail x="-137" y="-208"/>
+			<nail x="-324" y="-183"/>
+		</transition>
+		<transition>
+			<source ref="id26"/>
+			<target ref="id26"/>
+			<label kind="guard" x="204" y="153">collision==true</label>
+			<nail x="170" y="195"/>
+			<nail x="221" y="144"/>
+		</transition>
+		<transition>
+			<source ref="id31"/>
+			<target ref="id26"/>
+			<label kind="guard" x="-203" y="8">time&gt;=MAXclk_Idle</label>
+			<label kind="assignment" x="-144" y="25">timeout:=true,count_timeouts:=count_timeouts+1</label>
+		</transition>
+		<transition>
+			<source ref="id36"/>
+			<target ref="id26"/>
+			<label kind="guard" x="178" y="-136">theorder==1</label>
+			<nail x="161" y="127"/>
+		</transition>
+		<transition>
+			<source ref="id35"/>
+			<target ref="id26"/>
+			<label kind="guard" x="187" y="-42">theorder==2 || theorder==3</label>
+		</transition>
+		<transition>
+			<source ref="id26"/>
+			<target ref="id33"/>
+			<label kind="guard" x="59" y="170">collision==false</label>
+			<label kind="assignment" x="68" y="187">time:=time+100</label>
+		</transition>
+		<transition>
+			<source ref="id34"/>
+			<target ref="id26"/>
+			<label kind="guard" x="212" y="93">theorder==4</label>
+		</transition>
+		<transition>
+			<source ref="id34"/>
+			<target ref="id28"/>
+			<label kind="guard" x="136" y="-25">theorder==3</label>
+		</transition>
+		<transition>
+			<source ref="id27"/>
+			<target ref="id27"/>
+			<label kind="guard" x="17" y="42">collision==true</label>
+			<nail x="33" y="64"/>
+			<nail x="110" y="107"/>
+		</transition>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id27"/>
+			<label kind="guard" x="-101" y="-51">theorder==3</label>
+			<label kind="assignment" x="-101" y="-17">count_clean:=count_clean+1</label>
+		</transition>
+		<transition>
+			<source ref="id27"/>
+			<target ref="id34"/>
+			<label kind="guard" x="195" y="34">collision==false</label>
+			<label kind="assignment" x="212" y="51">time:=time+240</label>
+		</transition>
+		<transition>
+			<source ref="id36"/>
+			<target ref="id27"/>
+			<label kind="guard" x="119" y="-119">theorder==4</label>
+			<label kind="assignment" x="161" y="-76">count_feed:=count_feed+1</label>
+		</transition>
+		<transition>
+			<source ref="id28"/>
+			<target ref="id28"/>
+			<label kind="guard" x="17" y="-34">collision==true</label>
+			<nail x="25" y="-34"/>
+			<nail x="76" y="-25"/>
+		</transition>
+		<transition>
+			<source ref="id28"/>
+			<target ref="id35"/>
+			<label kind="guard" x="76" y="-76">collision==false</label>
+			<label kind="assignment" x="69" y="-59">time:=time+80</label>
+		</transition>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id28"/>
+			<label kind="guard" x="-101" y="-93">theorder==2</label>
+		</transition>
+		<transition>
+			<source ref="id29"/>
+			<target ref="id29"/>
+			<label kind="guard" x="-34" y="-187">collision==true</label>
+			<nail x="-25" y="-153"/>
+			<nail x="42" y="-187"/>
+		</transition>
+		<transition>
+			<source ref="id29"/>
+			<target ref="id36"/>
+			<label kind="guard" x="59" y="-178">collision==false</label>
+			<label kind="assignment" x="51" y="-161">time:=time+80</label>
+		</transition>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id29"/>
+			<label kind="guard" x="-110" y="-110">theorder==1 || theorder==4</label>
+		</transition>
+		<transition>
+			<source ref="id32"/>
+			<target ref="id30"/>
+			<label kind="guard" x="-127" y="-178">theorder==0</label>
+		</transition>
+		<transition>
+			<source ref="id33"/>
+			<target ref="id31"/>
+			<label kind="synchronisation" x="-221" y="51">done!</label>
+			<label kind="assignment" x="-272" y="68">time:=0,timeout:=false</label>
+			<nail x="-263" y="17"/>
+		</transition>
+		<transition>
+			<source ref="id37"/>
+			<target ref="id31"/>
+			<label kind="synchronisation" x="-305" y="-76">starting?</label>
+			<label kind="assignment" x="-297" y="-59">time:=0</label>
+		</transition>
+		<transition>
+			<source ref="id31"/>
+			<target ref="id31"/>
+			<label kind="guard" x="-263" y="-153">time&lt;MAXclk_Idle</label>
+			<label kind="assignment" x="-237" y="-131">time:=time+4</label>
+			<nail x="-255" y="-136"/>
+			<nail x="-178" y="-127"/>
+		</transition>
+		<transition>
+			<source ref="id31"/>
+			<target ref="id32"/>
+			<label kind="synchronisation" x="-186" y="-76">order?</label>
+		</transition>
+	</template>
+	<template>
+		<name>sensors</name>
+		<location id="id38" x="-85" y="51">
+			<name x="-95" y="17">noCollision</name>
+		</location>
+		<location id="id39" x="-85" y="-59">
+			<name x="-95" y="-93">inCollision</name>
+		</location>
+		<location id="id40" x="-161" y="0">
+			<name x="-171" y="-34">sense</name>
+			<committed/>
+		</location>
+		<location id="id41" x="-255" y="0">
+			<name x="-272" y="-42">start</name>
+			<committed/>
+		</location>
+		<init ref="id41"/>
+		<transition>
+			<source ref="id38"/>
+			<target ref="id40"/>
+			<nail x="-161" y="85"/>
+		</transition>
+		<transition>
+			<source ref="id39"/>
+			<target ref="id40"/>
+			<nail x="-170" y="-102"/>
+		</transition>
+		<transition>
+			<source ref="id41"/>
+			<target ref="id40"/>
+			<label kind="synchronisation" x="-238" y="-17">starting?</label>
+		</transition>
+		<transition>
+			<source ref="id40"/>
+			<target ref="id39"/>
+			<label kind="assignment" x="-143" y="-29">collision:=true</label>
+		</transition>
+		<transition>
+			<source ref="id40"/>
+			<target ref="id38"/>
+			<label kind="assignment" x="-143" y="25">collision:=false</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Dog = dog();
+Human = human();
+Robot = robot();
+Sensors = sensors();
+// List one or more processes to be composed into a system.
+system Dog,Human,Robot,Sensors;
+    </system>
+	<queries>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and fridge==true and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and sink==true and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and clean==true and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and feed==true and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and whatever==true and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and fridge==true and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and sink==true and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and clean==true and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and feed==true and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and whatever==true and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and fridge==true and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and sink==true and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and clean==true and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and feed==true and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; Robot.ended and Human.ended and whatever==true and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; count_timeouts==1 and Robot.ended and Human.ended and chooseact==0
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; count_timeouts==1 and Robot.ended and Human.ended and chooseact==1
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>E&lt;&gt; count_timeouts==1 and Robot.ended and Human.ended and chooseact==2
+			</formula>
+			<comment>
+			</comment>
+		</query>
+	</queries>
+</nta>

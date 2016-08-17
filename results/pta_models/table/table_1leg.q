@@ -1,0 +1,9 @@
+E<> hlegs==1 and g_legs==1 and released==true and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==true and s_pressureOk==true and s_locationOk==false and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==true and s_pressureOk==false and s_locationOk==true and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==true and s_pressureOk==false and s_locationOk==false and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==false and s_pressureOk==true and s_locationOk==true and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==false and s_pressureOk==true and s_locationOk==false and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==false and s_pressureOk==false and s_locationOk==true and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and s_gazeOk==false and s_pressureOk==false and s_locationOk==false and s_undefGaze==false and s_undefPress==false and s_undefLoc==false and all_sensors==true and discarded==true and timedout==false and Human.interactionDone
+E<> hlegs==1 and g_legs==0 and bored==true and discarded==true and timedout==true and Human.interactionDone

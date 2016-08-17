@@ -1,0 +1,16 @@
+receivesignal
+set_param pressure = 1
+bored
+set_param pressure = 1
+tell leg
+set_param pressure = 0
+bored
+set_param pressure = 1
+bored
+set_param location = 0
+tell leg
+tell humanReady
+set_param gaze = 1
+set_param location = 0
+set_param pressure = 1
+receivesignal

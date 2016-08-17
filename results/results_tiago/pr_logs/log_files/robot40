@@ -1,0 +1,2415 @@
+[INFO] [WallTime: 1471285388.981596] [0.000000] Waiting for motion servers...
+[INFO] [WallTime: 1471285389.118540] [10.359000] ...connected.
+[INFO] [WallTime: 1471285392.523171] [13.397000] Robot is ready
+feed
+[INFO] [WallTime: 1471285392.643413] [13.500000] feed
+[INFO] [WallTime: 1471285392.648258] [13.500000] State machine starting in initial state 'Fridge' with userdata: 
+	[]
+
+[INFO] [WallTime: 1471285417.768248] [36.610000] State machine transitioning 'Fridge':'outcome1'-->'Grabfood'
+[INFO] [WallTime: 1471285420.549597] [39.184000] grabbed
+[INFO] [WallTime: 1471285420.658792] [39.289000] State machine transitioning 'Grabfood':'outcome1'-->'Human'
+[INFO] [WallTime: 1471285471.704396] [86.399000] State machine transitioning 'Human':'outcome1'-->'Recharge'
+[INFO] [WallTime: 1471285514.892370] [125.930000] State machine terminating 'Recharge':'outcome1':'nextOrder'
+
+[INFO] [WallTime: 1471285515.538214] [126.537000] 
+[INFO] [WallTime: 1471285515.539261] [126.537000] I cannot do this
+
+[INFO] [WallTime: 1471285515.652878] [126.637000] 
+[INFO] [WallTime: 1471285515.653640] [126.637000] I cannot do this
+
+[INFO] [WallTime: 1471285515.767078] [126.740000] 
+[INFO] [WallTime: 1471285515.767696] [126.740000] I cannot do this
+
+[INFO] [WallTime: 1471285515.877666] [126.841000] 
+[INFO] [WallTime: 1471285515.878585] [126.841000] I cannot do this
+
+[INFO] [WallTime: 1471285515.988195] [126.941000] 
+[INFO] [WallTime: 1471285515.990293] [126.941000] I cannot do this
+
+[INFO] [WallTime: 1471285516.101088] [127.044000] 
+[INFO] [WallTime: 1471285516.102396] [127.044000] I cannot do this
+
+[INFO] [WallTime: 1471285516.208390] [127.145000] 
+[INFO] [WallTime: 1471285516.209313] [127.145000] I cannot do this
+
+[INFO] [WallTime: 1471285516.334790] [127.261000] 
+[INFO] [WallTime: 1471285516.335700] [127.261000] I cannot do this
+
+[INFO] [WallTime: 1471285516.443010] [127.361000] 
+[INFO] [WallTime: 1471285516.443608] [127.361000] I cannot do this
+
+[INFO] [WallTime: 1471285516.553307] [127.461000] 
+[INFO] [WallTime: 1471285516.553945] [127.461000] I cannot do this
+
+[INFO] [WallTime: 1471285516.670306] [127.566000] 
+[INFO] [WallTime: 1471285516.671767] [127.566000] I cannot do this
+
+[INFO] [WallTime: 1471285516.775695] [127.666000] 
+[INFO] [WallTime: 1471285516.777442] [127.666000] I cannot do this
+
+[INFO] [WallTime: 1471285516.883528] [127.766000] 
+[INFO] [WallTime: 1471285516.884211] [127.766000] I cannot do this
+
+[INFO] [WallTime: 1471285517.004937] [127.868000] 
+[INFO] [WallTime: 1471285517.005583] [127.868000] I cannot do this
+
+[INFO] [WallTime: 1471285517.109658] [127.968000] 
+[INFO] [WallTime: 1471285517.110532] [127.969000] I cannot do this
+
+[INFO] [WallTime: 1471285517.230064] [128.070000] 
+[INFO] [WallTime: 1471285517.230819] [128.070000] I cannot do this
+
+[INFO] [WallTime: 1471285517.341388] [128.171000] 
+[INFO] [WallTime: 1471285517.342275] [128.171000] I cannot do this
+
+[INFO] [WallTime: 1471285517.456279] [128.275000] 
+[INFO] [WallTime: 1471285517.457009] [128.275000] I cannot do this
+
+[INFO] [WallTime: 1471285517.560055] [128.375000] 
+[INFO] [WallTime: 1471285517.561126] [128.375000] I cannot do this
+
+[INFO] [WallTime: 1471285517.684693] [128.476000] 
+[INFO] [WallTime: 1471285517.685905] [128.476000] I cannot do this
+
+[INFO] [WallTime: 1471285517.786380] [128.580000] 
+[INFO] [WallTime: 1471285517.788190] [128.582000] I cannot do this
+
+[INFO] [WallTime: 1471285517.922055] [128.703000] 
+[INFO] [WallTime: 1471285517.923806] [128.703000] I cannot do this
+
+[INFO] [WallTime: 1471285518.036977] [128.806000] 
+[INFO] [WallTime: 1471285518.037892] [128.806000] I cannot do this
+
+[INFO] [WallTime: 1471285518.142159] [128.906000] 
+[INFO] [WallTime: 1471285518.142818] [128.906000] I cannot do this
+
+[INFO] [WallTime: 1471285518.260514] [129.009000] 
+[INFO] [WallTime: 1471285518.261508] [129.009000] I cannot do this
+
+[INFO] [WallTime: 1471285518.365943] [129.109000] 
+[INFO] [WallTime: 1471285518.366898] [129.110000] I cannot do this
+
+[INFO] [WallTime: 1471285518.476061] [129.211000] 
+[INFO] [WallTime: 1471285518.480027] [129.211000] I cannot do this
+
+[INFO] [WallTime: 1471285518.588742] [129.315000] 
+[INFO] [WallTime: 1471285518.590536] [129.315000] I cannot do this
+
+[INFO] [WallTime: 1471285518.698093] [129.416000] 
+[INFO] [WallTime: 1471285518.699029] [129.416000] I cannot do this
+
+[INFO] [WallTime: 1471285518.806264] [129.518000] 
+[INFO] [WallTime: 1471285518.807261] [129.518000] I cannot do this
+
+[INFO] [WallTime: 1471285518.920988] [129.626000] 
+[INFO] [WallTime: 1471285518.921792] [129.626000] I cannot do this
+
+[INFO] [WallTime: 1471285519.035302] [129.727000] 
+[INFO] [WallTime: 1471285519.036882] [129.727000] I cannot do this
+
+[INFO] [WallTime: 1471285519.142465] [129.827000] 
+[INFO] [WallTime: 1471285519.143275] [129.827000] I cannot do this
+
+[INFO] [WallTime: 1471285519.256684] [129.931000] 
+[INFO] [WallTime: 1471285519.262643] [129.931000] I cannot do this
+
+[INFO] [WallTime: 1471285519.360546] [130.031000] 
+[INFO] [WallTime: 1471285519.361548] [130.031000] I cannot do this
+
+[INFO] [WallTime: 1471285519.474489] [130.134000] 
+[INFO] [WallTime: 1471285519.475452] [130.134000] I cannot do this
+
+[INFO] [WallTime: 1471285519.585186] [130.238000] 
+[INFO] [WallTime: 1471285519.585844] [130.238000] I cannot do this
+
+[INFO] [WallTime: 1471285519.693208] [130.338000] 
+[INFO] [WallTime: 1471285519.693946] [130.338000] I cannot do this
+
+[INFO] [WallTime: 1471285519.798240] [130.438000] 
+[INFO] [WallTime: 1471285519.799576] [130.439000] I cannot do this
+
+[INFO] [WallTime: 1471285519.909850] [130.540000] 
+[INFO] [WallTime: 1471285519.910445] [130.540000] I cannot do this
+
+[INFO] [WallTime: 1471285520.024328] [130.640000] 
+[INFO] [WallTime: 1471285520.024855] [130.640000] I cannot do this
+
+[INFO] [WallTime: 1471285520.127694] [130.741000] 
+[INFO] [WallTime: 1471285520.128306] [130.741000] I cannot do this
+
+[INFO] [WallTime: 1471285520.241437] [130.844000] 
+[INFO] [WallTime: 1471285520.243675] [130.844000] I cannot do this
+
+[INFO] [WallTime: 1471285520.364016] [130.953000] 
+[INFO] [WallTime: 1471285520.364837] [130.954000] I cannot do this
+
+[INFO] [WallTime: 1471285520.477017] [131.060000] 
+[INFO] [WallTime: 1471285520.478108] [131.060000] I cannot do this
+
+[INFO] [WallTime: 1471285520.602379] [131.180000] 
+[INFO] [WallTime: 1471285520.602902] [131.180000] I cannot do this
+
+[INFO] [WallTime: 1471285520.718573] [131.287000] 
+[INFO] [WallTime: 1471285520.719198] [131.287000] I cannot do this
+
+[INFO] [WallTime: 1471285520.832979] [131.387000] 
+[INFO] [WallTime: 1471285520.834129] [131.387000] I cannot do this
+
+[INFO] [WallTime: 1471285520.937020] [131.487000] 
+[INFO] [WallTime: 1471285520.937905] [131.487000] I cannot do this
+
+[INFO] [WallTime: 1471285521.049441] [131.590000] 
+[INFO] [WallTime: 1471285521.050408] [131.591000] I cannot do this
+
+[INFO] [WallTime: 1471285521.158901] [131.691000] 
+[INFO] [WallTime: 1471285521.159504] [131.691000] I cannot do this
+
+[INFO] [WallTime: 1471285521.269872] [131.794000] 
+[INFO] [WallTime: 1471285521.270723] [131.794000] I cannot do this
+
+[INFO] [WallTime: 1471285521.388359] [131.898000] 
+[INFO] [WallTime: 1471285521.389354] [131.899000] I cannot do this
+
+[INFO] [WallTime: 1471285521.497009] [131.999000] 
+[INFO] [WallTime: 1471285521.497915] [131.999000] I cannot do this
+
+[INFO] [WallTime: 1471285521.606735] [132.099000] 
+[INFO] [WallTime: 1471285521.608519] [132.100000] I cannot do this
+
+[INFO] [WallTime: 1471285521.733734] [132.215000] 
+[INFO] [WallTime: 1471285521.734380] [132.215000] I cannot do this
+
+[INFO] [WallTime: 1471285521.843828] [132.316000] 
+[INFO] [WallTime: 1471285521.844459] [132.316000] I cannot do this
+
+[INFO] [WallTime: 1471285521.955269] [132.419000] 
+[INFO] [WallTime: 1471285521.956280] [132.420000] I cannot do this
+
+[INFO] [WallTime: 1471285522.075399] [132.521000] 
+[INFO] [WallTime: 1471285522.076258] [132.521000] I cannot do this
+
+[INFO] [WallTime: 1471285522.188791] [132.626000] 
+[INFO] [WallTime: 1471285522.189533] [132.626000] I cannot do this
+
+[INFO] [WallTime: 1471285522.299611] [132.726000] 
+[INFO] [WallTime: 1471285522.300529] [132.727000] I cannot do this
+
+[INFO] [WallTime: 1471285522.406680] [132.827000] 
+[INFO] [WallTime: 1471285522.407861] [132.828000] I cannot do this
+
+[INFO] [WallTime: 1471285522.520973] [132.930000] 
+[INFO] [WallTime: 1471285522.521942] [132.930000] I cannot do this
+
+[INFO] [WallTime: 1471285522.632728] [133.030000] 
+[INFO] [WallTime: 1471285522.633512] [133.031000] I cannot do this
+
+[INFO] [WallTime: 1471285522.743759] [133.131000] 
+[INFO] [WallTime: 1471285522.744510] [133.131000] I cannot do this
+
+[INFO] [WallTime: 1471285522.852627] [133.232000] 
+[INFO] [WallTime: 1471285522.853332] [133.232000] I cannot do this
+
+[INFO] [WallTime: 1471285522.962751] [133.334000] 
+[INFO] [WallTime: 1471285522.963582] [133.334000] I cannot do this
+
+[INFO] [WallTime: 1471285523.072158] [133.437000] 
+[INFO] [WallTime: 1471285523.073859] [133.437000] I cannot do this
+
+[INFO] [WallTime: 1471285523.183572] [133.540000] 
+[INFO] [WallTime: 1471285523.184461] [133.540000] I cannot do this
+
+[INFO] [WallTime: 1471285523.297738] [133.640000] 
+[INFO] [WallTime: 1471285523.299197] [133.640000] I cannot do this
+
+[INFO] [WallTime: 1471285523.409184] [133.742000] 
+[INFO] [WallTime: 1471285523.409745] [133.742000] I cannot do this
+
+[INFO] [WallTime: 1471285523.518423] [133.845000] 
+[INFO] [WallTime: 1471285523.520264] [133.845000] I cannot do this
+
+[INFO] [WallTime: 1471285523.632366] [133.946000] 
+[INFO] [WallTime: 1471285523.633539] [133.946000] I cannot do this
+
+[INFO] [WallTime: 1471285523.733035] [134.046000] 
+[INFO] [WallTime: 1471285523.733877] [134.046000] I cannot do this
+
+[INFO] [WallTime: 1471285523.853499] [134.159000] 
+[INFO] [WallTime: 1471285523.854066] [134.159000] I cannot do this
+
+[INFO] [WallTime: 1471285523.966202] [134.263000] 
+[INFO] [WallTime: 1471285523.973204] [134.267000] I cannot do this
+
+[INFO] [WallTime: 1471285524.083012] [134.368000] 
+[INFO] [WallTime: 1471285524.083877] [134.368000] I cannot do this
+
+[INFO] [WallTime: 1471285524.192991] [134.469000] 
+[INFO] [WallTime: 1471285524.193938] [134.469000] I cannot do this
+
+[INFO] [WallTime: 1471285524.305767] [134.572000] 
+[INFO] [WallTime: 1471285524.306753] [134.573000] I cannot do this
+
+[INFO] [WallTime: 1471285524.421991] [134.674000] 
+[INFO] [WallTime: 1471285524.423072] [134.674000] I cannot do this
+
+[INFO] [WallTime: 1471285524.533520] [134.775000] 
+[INFO] [WallTime: 1471285524.534287] [134.775000] I cannot do this
+
+[INFO] [WallTime: 1471285524.642479] [134.878000] 
+[INFO] [WallTime: 1471285524.643320] [134.878000] I cannot do this
+
+[INFO] [WallTime: 1471285524.749323] [134.979000] 
+[INFO] [WallTime: 1471285524.750612] [134.979000] I cannot do this
+
+[INFO] [WallTime: 1471285524.854013] [135.079000] 
+[INFO] [WallTime: 1471285524.855050] [135.079000] I cannot do this
+
+[INFO] [WallTime: 1471285524.960936] [135.179000] 
+[INFO] [WallTime: 1471285524.961879] [135.180000] I cannot do this
+
+[INFO] [WallTime: 1471285525.071360] [135.280000] 
+[INFO] [WallTime: 1471285525.075555] [135.283000] I cannot do this
+
+[INFO] [WallTime: 1471285525.183592] [135.385000] 
+[INFO] [WallTime: 1471285525.184703] [135.385000] I cannot do this
+
+[INFO] [WallTime: 1471285525.295611] [135.485000] 
+[INFO] [WallTime: 1471285525.296313] [135.485000] I cannot do this
+
+[INFO] [WallTime: 1471285525.409566] [135.586000] 
+[INFO] [WallTime: 1471285525.410474] [135.586000] I cannot do this
+
+[INFO] [WallTime: 1471285525.526710] [135.688000] 
+[INFO] [WallTime: 1471285525.527799] [135.688000] I cannot do this
+
+[INFO] [WallTime: 1471285525.636672] [135.788000] 
+[INFO] [WallTime: 1471285525.638848] [135.788000] I cannot do this
+
+[INFO] [WallTime: 1471285525.746830] [135.890000] 
+[INFO] [WallTime: 1471285525.747810] [135.890000] I cannot do this
+
+[INFO] [WallTime: 1471285525.860382] [135.992000] 
+[INFO] [WallTime: 1471285525.867072] [135.996000] I cannot do this
+
+[INFO] [WallTime: 1471285525.976941] [136.096000] 
+[INFO] [WallTime: 1471285525.977956] [136.097000] I cannot do this
+
+[INFO] [WallTime: 1471285526.091396] [136.200000] 
+[INFO] [WallTime: 1471285526.092132] [136.200000] I cannot do this
+
+[INFO] [WallTime: 1471285526.212921] [136.311000] 
+[INFO] [WallTime: 1471285526.216312] [136.311000] I cannot do this
+
+[INFO] [WallTime: 1471285526.323027] [136.413000] 
+[INFO] [WallTime: 1471285526.324366] [136.413000] I cannot do this
+
+[INFO] [WallTime: 1471285526.432544] [136.514000] 
+[INFO] [WallTime: 1471285526.433468] [136.514000] I cannot do this
+
+[INFO] [WallTime: 1471285526.538486] [136.614000] 
+[INFO] [WallTime: 1471285526.539674] [136.614000] I cannot do this
+
+[INFO] [WallTime: 1471285526.656558] [136.720000] 
+[INFO] [WallTime: 1471285526.657345] [136.720000] I cannot do this
+
+[INFO] [WallTime: 1471285526.760874] [136.820000] 
+[INFO] [WallTime: 1471285526.761817] [136.821000] I cannot do this
+
+[INFO] [WallTime: 1471285526.872803] [136.925000] 
+[INFO] [WallTime: 1471285526.873952] [136.926000] I cannot do this
+
+[INFO] [WallTime: 1471285526.983479] [137.027000] 
+[INFO] [WallTime: 1471285526.984377] [137.027000] I cannot do this
+
+[INFO] [WallTime: 1471285527.093478] [137.127000] 
+[INFO] [WallTime: 1471285527.097995] [137.127000] I cannot do this
+
+[INFO] [WallTime: 1471285527.202486] [137.228000] 
+[INFO] [WallTime: 1471285527.204283] [137.228000] I cannot do this
+
+[INFO] [WallTime: 1471285527.319351] [137.334000] 
+[INFO] [WallTime: 1471285527.320216] [137.334000] I cannot do this
+
+[INFO] [WallTime: 1471285527.428790] [137.435000] 
+[INFO] [WallTime: 1471285527.431249] [137.435000] I cannot do this
+
+[INFO] [WallTime: 1471285527.538422] [137.535000] 
+[INFO] [WallTime: 1471285527.539612] [137.535000] I cannot do this
+
+[INFO] [WallTime: 1471285527.650057] [137.636000] 
+[INFO] [WallTime: 1471285527.651289] [137.637000] I cannot do this
+
+[INFO] [WallTime: 1471285527.760723] [137.738000] 
+[INFO] [WallTime: 1471285527.761621] [137.738000] I cannot do this
+
+[INFO] [WallTime: 1471285527.870598] [137.838000] 
+[INFO] [WallTime: 1471285527.871942] [137.839000] I cannot do this
+
+[INFO] [WallTime: 1471285527.980296] [137.939000] 
+[INFO] [WallTime: 1471285527.981373] [137.939000] I cannot do this
+
+[INFO] [WallTime: 1471285528.086034] [138.039000] 
+[INFO] [WallTime: 1471285528.086945] [138.039000] I cannot do this
+
+[INFO] [WallTime: 1471285528.196299] [138.139000] 
+[INFO] [WallTime: 1471285528.196984] [138.139000] I cannot do this
+
+[INFO] [WallTime: 1471285528.305166] [138.240000] 
+[INFO] [WallTime: 1471285528.306211] [138.240000] I cannot do this
+
+[INFO] [WallTime: 1471285528.419209] [138.345000] 
+[INFO] [WallTime: 1471285528.420203] [138.345000] I cannot do this
+
+[INFO] [WallTime: 1471285528.529249] [138.447000] 
+[INFO] [WallTime: 1471285528.532553] [138.447000] I cannot do this
+
+[INFO] [WallTime: 1471285528.637976] [138.549000] 
+[INFO] [WallTime: 1471285528.642730] [138.549000] I cannot do this
+
+[INFO] [WallTime: 1471285528.742405] [138.649000] 
+[INFO] [WallTime: 1471285528.744031] [138.649000] I cannot do this
+
+[INFO] [WallTime: 1471285528.862195] [138.757000] 
+[INFO] [WallTime: 1471285528.863142] [138.757000] I cannot do this
+
+[INFO] [WallTime: 1471285528.968318] [138.858000] 
+[INFO] [WallTime: 1471285528.969062] [138.858000] I cannot do this
+
+[INFO] [WallTime: 1471285529.082123] [138.962000] 
+[INFO] [WallTime: 1471285529.083270] [138.962000] I cannot do this
+
+[INFO] [WallTime: 1471285529.187793] [139.062000] 
+[INFO] [WallTime: 1471285529.189255] [139.063000] I cannot do this
+
+[INFO] [WallTime: 1471285529.301058] [139.167000] 
+[INFO] [WallTime: 1471285529.303633] [139.167000] I cannot do this
+
+[INFO] [WallTime: 1471285529.413359] [139.267000] 
+[INFO] [WallTime: 1471285529.414248] [139.267000] I cannot do this
+
+[INFO] [WallTime: 1471285529.531150] [139.372000] 
+[INFO] [WallTime: 1471285529.534869] [139.374000] I cannot do this
+
+[INFO] [WallTime: 1471285529.641806] [139.475000] 
+[INFO] [WallTime: 1471285529.642774] [139.475000] I cannot do this
+
+[INFO] [WallTime: 1471285529.753418] [139.576000] 
+[INFO] [WallTime: 1471285529.754648] [139.576000] I cannot do this
+
+[INFO] [WallTime: 1471285529.871655] [139.676000] 
+[INFO] [WallTime: 1471285529.872589] [139.676000] I cannot do this
+
+[INFO] [WallTime: 1471285529.974168] [139.776000] 
+[INFO] [WallTime: 1471285529.975154] [139.776000] I cannot do this
+
+[INFO] [WallTime: 1471285530.081750] [139.876000] 
+[INFO] [WallTime: 1471285530.082512] [139.876000] I cannot do this
+
+[INFO] [WallTime: 1471285530.191846] [139.977000] 
+[INFO] [WallTime: 1471285530.192572] [139.977000] I cannot do this
+
+[INFO] [WallTime: 1471285530.306894] [140.081000] 
+[INFO] [WallTime: 1471285530.307605] [140.081000] I cannot do this
+
+[INFO] [WallTime: 1471285530.419175] [140.182000] 
+[INFO] [WallTime: 1471285530.420728] [140.182000] I cannot do this
+
+[INFO] [WallTime: 1471285530.527260] [140.288000] 
+[INFO] [WallTime: 1471285530.532288] [140.288000] I cannot do this
+
+[INFO] [WallTime: 1471285530.639440] [140.389000] 
+[INFO] [WallTime: 1471285530.640772] [140.389000] I cannot do this
+
+[INFO] [WallTime: 1471285530.745732] [140.491000] 
+[INFO] [WallTime: 1471285530.748026] [140.493000] I cannot do this
+
+[INFO] [WallTime: 1471285530.858835] [140.594000] 
+[INFO] [WallTime: 1471285530.860115] [140.595000] I cannot do this
+
+[INFO] [WallTime: 1471285530.975034] [140.699000] 
+[INFO] [WallTime: 1471285530.975985] [140.699000] I cannot do this
+
+[INFO] [WallTime: 1471285531.083812] [140.799000] 
+[INFO] [WallTime: 1471285531.085759] [140.799000] I cannot do this
+
+[INFO] [WallTime: 1471285531.192767] [140.900000] 
+[INFO] [WallTime: 1471285531.193749] [140.901000] I cannot do this
+
+[INFO] [WallTime: 1471285531.300772] [141.002000] 
+[INFO] [WallTime: 1471285531.301548] [141.002000] I cannot do this
+
+[INFO] [WallTime: 1471285531.413181] [141.103000] 
+[INFO] [WallTime: 1471285531.414049] [141.103000] I cannot do this
+
+[INFO] [WallTime: 1471285531.525998] [141.206000] 
+[INFO] [WallTime: 1471285531.527078] [141.206000] I cannot do this
+
+[INFO] [WallTime: 1471285531.635441] [141.310000] 
+[INFO] [WallTime: 1471285531.635931] [141.310000] I cannot do this
+
+[INFO] [WallTime: 1471285531.742689] [141.412000] 
+[INFO] [WallTime: 1471285531.743585] [141.412000] I cannot do this
+
+[INFO] [WallTime: 1471285531.854721] [141.516000] 
+[INFO] [WallTime: 1471285531.855617] [141.516000] I cannot do this
+
+[INFO] [WallTime: 1471285531.962336] [141.618000] 
+[INFO] [WallTime: 1471285531.963598] [141.618000] I cannot do this
+
+[INFO] [WallTime: 1471285532.068230] [141.718000] 
+[INFO] [WallTime: 1471285532.069305] [141.719000] I cannot do this
+
+[INFO] [WallTime: 1471285532.170608] [141.819000] 
+[INFO] [WallTime: 1471285532.171287] [141.819000] I cannot do this
+
+[INFO] [WallTime: 1471285532.288283] [141.920000] 
+[INFO] [WallTime: 1471285532.289628] [141.920000] I cannot do this
+
+[INFO] [WallTime: 1471285532.394315] [142.020000] 
+[INFO] [WallTime: 1471285532.395705] [142.022000] I cannot do this
+
+[INFO] [WallTime: 1471285532.512319] [142.123000] 
+[INFO] [WallTime: 1471285532.512995] [142.123000] I cannot do this
+
+[INFO] [WallTime: 1471285532.620305] [142.225000] 
+[INFO] [WallTime: 1471285532.621896] [142.225000] I cannot do this
+
+[INFO] [WallTime: 1471285532.730634] [142.325000] 
+[INFO] [WallTime: 1471285532.731341] [142.326000] I cannot do this
+
+[INFO] [WallTime: 1471285532.848289] [142.428000] 
+[INFO] [WallTime: 1471285532.849607] [142.428000] I cannot do this
+
+[INFO] [WallTime: 1471285532.958111] [142.529000] 
+[INFO] [WallTime: 1471285532.959569] [142.530000] I cannot do this
+
+[INFO] [WallTime: 1471285533.080550] [142.636000] 
+[INFO] [WallTime: 1471285533.081603] [142.637000] I cannot do this
+
+[INFO] [WallTime: 1471285533.191630] [142.740000] 
+[INFO] [WallTime: 1471285533.192409] [142.740000] I cannot do this
+
+[INFO] [WallTime: 1471285533.301852] [142.842000] 
+[INFO] [WallTime: 1471285533.302503] [142.842000] I cannot do this
+
+[INFO] [WallTime: 1471285533.411631] [142.942000] 
+[INFO] [WallTime: 1471285533.412543] [142.942000] I cannot do this
+
+[INFO] [WallTime: 1471285533.549484] [143.066000] 
+[INFO] [WallTime: 1471285533.550701] [143.067000] I cannot do this
+
+[INFO] [WallTime: 1471285533.661105] [143.172000] 
+[INFO] [WallTime: 1471285533.661631] [143.172000] I cannot do this
+
+[INFO] [WallTime: 1471285533.771122] [143.272000] 
+[INFO] [WallTime: 1471285533.771802] [143.272000] I cannot do this
+
+[INFO] [WallTime: 1471285533.879541] [143.372000] 
+[INFO] [WallTime: 1471285533.880282] [143.372000] I cannot do this
+
+[INFO] [WallTime: 1471285534.003695] [143.481000] 
+[INFO] [WallTime: 1471285534.005906] [143.481000] I cannot do this
+
+[INFO] [WallTime: 1471285534.113246] [143.582000] 
+[INFO] [WallTime: 1471285534.114545] [143.583000] I cannot do this
+
+[INFO] [WallTime: 1471285534.228568] [143.683000] 
+[INFO] [WallTime: 1471285534.229478] [143.683000] I cannot do this
+
+[INFO] [WallTime: 1471285534.341262] [143.783000] 
+[INFO] [WallTime: 1471285534.343131] [143.784000] I cannot do this
+
+[INFO] [WallTime: 1471285534.449987] [143.884000] 
+[INFO] [WallTime: 1471285534.451133] [143.885000] I cannot do this
+
+[INFO] [WallTime: 1471285534.560107] [143.985000] 
+[INFO] [WallTime: 1471285534.561418] [143.985000] I cannot do this
+
+[INFO] [WallTime: 1471285534.668563] [144.085000] 
+[INFO] [WallTime: 1471285534.669718] [144.086000] I cannot do this
+
+[INFO] [WallTime: 1471285534.775292] [144.186000] 
+[INFO] [WallTime: 1471285534.776419] [144.186000] I cannot do this
+
+[INFO] [WallTime: 1471285534.892674] [144.286000] 
+[INFO] [WallTime: 1471285534.893354] [144.286000] I cannot do this
+
+[INFO] [WallTime: 1471285534.999994] [144.386000] 
+[INFO] [WallTime: 1471285535.000949] [144.388000] I cannot do this
+
+[INFO] [WallTime: 1471285535.114985] [144.489000] 
+[INFO] [WallTime: 1471285535.115512] [144.489000] I cannot do this
+
+[INFO] [WallTime: 1471285535.219078] [144.589000] 
+[INFO] [WallTime: 1471285535.221147] [144.589000] I cannot do this
+
+[INFO] [WallTime: 1471285535.334925] [144.691000] 
+[INFO] [WallTime: 1471285535.335483] [144.691000] I cannot do this
+
+[INFO] [WallTime: 1471285535.446258] [144.795000] 
+[INFO] [WallTime: 1471285535.447334] [144.795000] I cannot do this
+
+[INFO] [WallTime: 1471285535.554754] [144.898000] 
+[INFO] [WallTime: 1471285535.555816] [144.898000] I cannot do this
+
+[INFO] [WallTime: 1471285535.657573] [144.998000] 
+[INFO] [WallTime: 1471285535.658487] [144.998000] I cannot do this
+
+[INFO] [WallTime: 1471285535.767307] [145.099000] 
+[INFO] [WallTime: 1471285535.768170] [145.100000] I cannot do this
+
+[INFO] [WallTime: 1471285535.875777] [145.200000] 
+[INFO] [WallTime: 1471285535.877504] [145.200000] I cannot do this
+
+[INFO] [WallTime: 1471285535.988963] [145.300000] 
+[INFO] [WallTime: 1471285535.989852] [145.301000] I cannot do this
+
+[INFO] [WallTime: 1471285536.101436] [145.402000] 
+[INFO] [WallTime: 1471285536.107067] [145.408000] I cannot do this
+
+[INFO] [WallTime: 1471285536.216838] [145.508000] 
+[INFO] [WallTime: 1471285536.217588] [145.508000] I cannot do this
+
+[INFO] [WallTime: 1471285536.331713] [145.609000] 
+[INFO] [WallTime: 1471285536.332687] [145.609000] I cannot do this
+
+[INFO] [WallTime: 1471285536.441191] [145.709000] 
+[INFO] [WallTime: 1471285536.441947] [145.709000] I cannot do this
+
+[INFO] [WallTime: 1471285536.557896] [145.817000] 
+[INFO] [WallTime: 1471285536.558577] [145.817000] I cannot do this
+
+[INFO] [WallTime: 1471285536.667693] [145.918000] 
+[INFO] [WallTime: 1471285536.668741] [145.918000] I cannot do this
+
+[INFO] [WallTime: 1471285536.773758] [146.018000] 
+[INFO] [WallTime: 1471285536.778490] [146.018000] I cannot do this
+
+[INFO] [WallTime: 1471285536.888170] [146.119000] 
+[INFO] [WallTime: 1471285536.889170] [146.119000] I cannot do this
+
+[INFO] [WallTime: 1471285536.994867] [146.219000] 
+[INFO] [WallTime: 1471285536.995825] [146.220000] I cannot do this
+
+[INFO] [WallTime: 1471285537.110589] [146.320000] 
+[INFO] [WallTime: 1471285537.111332] [146.320000] I cannot do this
+
+[INFO] [WallTime: 1471285537.224343] [146.422000] 
+[INFO] [WallTime: 1471285537.225897] [146.422000] I cannot do this
+
+[INFO] [WallTime: 1471285537.333356] [146.523000] 
+[INFO] [WallTime: 1471285537.334322] [146.523000] I cannot do this
+
+[INFO] [WallTime: 1471285537.446064] [146.623000] 
+[INFO] [WallTime: 1471285537.450016] [146.624000] I cannot do this
+
+[INFO] [WallTime: 1471285537.553915] [146.724000] 
+[INFO] [WallTime: 1471285537.554789] [146.724000] I cannot do this
+
+[INFO] [WallTime: 1471285537.668491] [146.825000] 
+[INFO] [WallTime: 1471285537.669174] [146.825000] I cannot do this
+
+[INFO] [WallTime: 1471285537.778230] [146.927000] 
+[INFO] [WallTime: 1471285537.779360] [146.927000] I cannot do this
+
+[INFO] [WallTime: 1471285537.884402] [147.027000] 
+[INFO] [WallTime: 1471285537.886513] [147.027000] I cannot do this
+
+[INFO] [WallTime: 1471285537.995193] [147.130000] 
+[INFO] [WallTime: 1471285537.996034] [147.131000] I cannot do this
+
+[INFO] [WallTime: 1471285538.112246] [147.231000] 
+[INFO] [WallTime: 1471285538.113224] [147.231000] I cannot do this
+
+[INFO] [WallTime: 1471285538.216186] [147.331000] 
+[INFO] [WallTime: 1471285538.218896] [147.332000] I cannot do this
+
+[INFO] [WallTime: 1471285538.327596] [147.432000] 
+[INFO] [WallTime: 1471285538.329692] [147.432000] I cannot do this
+
+[INFO] [WallTime: 1471285538.452444] [147.539000] 
+[INFO] [WallTime: 1471285538.453540] [147.539000] I cannot do this
+
+[INFO] [WallTime: 1471285538.585464] [147.658000] 
+[INFO] [WallTime: 1471285538.586641] [147.658000] I cannot do this
+
+[INFO] [WallTime: 1471285538.695290] [147.759000] 
+[INFO] [WallTime: 1471285538.696399] [147.759000] I cannot do this
+
+[INFO] [WallTime: 1471285538.806506] [147.862000] 
+[INFO] [WallTime: 1471285538.807539] [147.863000] I cannot do this
+
+[INFO] [WallTime: 1471285538.919109] [147.963000] 
+[INFO] [WallTime: 1471285538.919839] [147.963000] I cannot do this
+
+[INFO] [WallTime: 1471285539.027179] [148.063000] 
+[INFO] [WallTime: 1471285539.027802] [148.063000] I cannot do this
+
+[INFO] [WallTime: 1471285539.142299] [148.166000] 
+[INFO] [WallTime: 1471285539.143758] [148.166000] I cannot do this
+
+[INFO] [WallTime: 1471285539.251241] [148.266000] 
+[INFO] [WallTime: 1471285539.251943] [148.266000] I cannot do this
+
+[INFO] [WallTime: 1471285539.362781] [148.366000] 
+[INFO] [WallTime: 1471285539.363759] [148.366000] I cannot do this
+
+[INFO] [WallTime: 1471285539.471484] [148.466000] 
+[INFO] [WallTime: 1471285539.472419] [148.466000] I cannot do this
+
+[INFO] [WallTime: 1471285539.575373] [148.566000] 
+[INFO] [WallTime: 1471285539.577429] [148.567000] I cannot do this
+
+[INFO] [WallTime: 1471285539.698613] [148.667000] 
+[INFO] [WallTime: 1471285539.699556] [148.667000] I cannot do this
+
+[INFO] [WallTime: 1471285539.810652] [148.768000] 
+[INFO] [WallTime: 1471285539.811675] [148.768000] I cannot do this
+
+[INFO] [WallTime: 1471285539.915474] [148.868000] 
+[INFO] [WallTime: 1471285539.916626] [148.869000] I cannot do this
+
+[INFO] [WallTime: 1471285540.023187] [148.970000] 
+[INFO] [WallTime: 1471285540.024090] [148.970000] I cannot do this
+
+[INFO] [WallTime: 1471285540.132551] [149.070000] 
+[INFO] [WallTime: 1471285540.134031] [149.070000] I cannot do this
+
+[INFO] [WallTime: 1471285540.246823] [149.172000] 
+[INFO] [WallTime: 1471285540.247708] [149.172000] I cannot do this
+
+[INFO] [WallTime: 1471285540.358287] [149.272000] 
+[INFO] [WallTime: 1471285540.360409] [149.273000] I cannot do this
+
+[INFO] [WallTime: 1471285540.469634] [149.374000] 
+[INFO] [WallTime: 1471285540.470705] [149.374000] I cannot do this
+
+[INFO] [WallTime: 1471285540.576444] [149.474000] 
+[INFO] [WallTime: 1471285540.578276] [149.474000] I cannot do this
+
+[INFO] [WallTime: 1471285540.686770] [149.574000] 
+[INFO] [WallTime: 1471285540.687537] [149.574000] I cannot do this
+
+[INFO] [WallTime: 1471285540.801743] [149.674000] 
+[INFO] [WallTime: 1471285540.802459] [149.674000] I cannot do this
+
+[INFO] [WallTime: 1471285540.914808] [149.774000] 
+[INFO] [WallTime: 1471285540.915889] [149.774000] I cannot do this
+
+[INFO] [WallTime: 1471285541.023745] [149.874000] 
+[INFO] [WallTime: 1471285541.024484] [149.874000] I cannot do this
+
+[INFO] [WallTime: 1471285541.129889] [149.975000] 
+[INFO] [WallTime: 1471285541.130969] [149.975000] I cannot do this
+
+[INFO] [WallTime: 1471285541.247853] [150.079000] 
+[INFO] [WallTime: 1471285541.249219] [150.080000] I cannot do this
+
+[INFO] [WallTime: 1471285541.355128] [150.180000] 
+[INFO] [WallTime: 1471285541.356370] [150.180000] I cannot do this
+
+[INFO] [WallTime: 1471285541.470119] [150.286000] 
+[INFO] [WallTime: 1471285541.470699] [150.286000] I cannot do this
+
+[INFO] [WallTime: 1471285541.582505] [150.387000] 
+[INFO] [WallTime: 1471285541.583113] [150.387000] I cannot do this
+
+[INFO] [WallTime: 1471285541.700892] [150.490000] 
+[INFO] [WallTime: 1471285541.702821] [150.490000] I cannot do this
+
+[INFO] [WallTime: 1471285541.805232] [150.590000] 
+[INFO] [WallTime: 1471285541.805944] [150.590000] I cannot do this
+
+[INFO] [WallTime: 1471285541.920335] [150.692000] 
+[INFO] [WallTime: 1471285541.921434] [150.692000] I cannot do this
+
+[INFO] [WallTime: 1471285542.027436] [150.793000] 
+[INFO] [WallTime: 1471285542.028360] [150.793000] I cannot do this
+
+[INFO] [WallTime: 1471285542.134348] [150.893000] 
+[INFO] [WallTime: 1471285542.135067] [150.893000] I cannot do this
+
+[INFO] [WallTime: 1471285542.245191] [150.993000] 
+[INFO] [WallTime: 1471285542.249763] [150.993000] I cannot do this
+
+[INFO] [WallTime: 1471285542.371221] [151.109000] 
+[INFO] [WallTime: 1471285542.372601] [151.109000] I cannot do this
+
+[INFO] [WallTime: 1471285542.483030] [151.213000] 
+[INFO] [WallTime: 1471285542.483695] [151.213000] I cannot do this
+
+[INFO] [WallTime: 1471285542.590881] [151.313000] 
+[INFO] [WallTime: 1471285542.591798] [151.313000] I cannot do this
+
+[INFO] [WallTime: 1471285542.701683] [151.413000] 
+[INFO] [WallTime: 1471285542.702917] [151.414000] I cannot do this
+
+[INFO] [WallTime: 1471285542.813174] [151.514000] 
+[INFO] [WallTime: 1471285542.814619] [151.515000] I cannot do this
+
+[INFO] [WallTime: 1471285542.935852] [151.615000] 
+[INFO] [WallTime: 1471285542.936977] [151.615000] I cannot do this
+
+[INFO] [WallTime: 1471285543.038340] [151.715000] 
+[INFO] [WallTime: 1471285543.039581] [151.715000] I cannot do this
+
+[INFO] [WallTime: 1471285543.159162] [151.819000] 
+[INFO] [WallTime: 1471285543.160151] [151.819000] I cannot do this
+
+[INFO] [WallTime: 1471285543.270085] [151.923000] 
+[INFO] [WallTime: 1471285543.270754] [151.923000] I cannot do this
+
+[INFO] [WallTime: 1471285543.376884] [152.023000] 
+[INFO] [WallTime: 1471285543.377866] [152.023000] I cannot do this
+
+[INFO] [WallTime: 1471285543.488359] [152.126000] 
+[INFO] [WallTime: 1471285543.489292] [152.127000] I cannot do this
+
+[INFO] [WallTime: 1471285543.596515] [152.228000] 
+[INFO] [WallTime: 1471285543.597757] [152.228000] I cannot do this
+
+[INFO] [WallTime: 1471285543.705424] [152.328000] 
+[INFO] [WallTime: 1471285543.706951] [152.328000] I cannot do this
+
+[INFO] [WallTime: 1471285543.814029] [152.428000] 
+[INFO] [WallTime: 1471285543.815657] [152.428000] I cannot do this
+
+[INFO] [WallTime: 1471285543.924749] [152.528000] 
+[INFO] [WallTime: 1471285543.926036] [152.529000] I cannot do this
+
+[INFO] [WallTime: 1471285544.036684] [152.630000] 
+[INFO] [WallTime: 1471285544.037498] [152.630000] I cannot do this
+
+[INFO] [WallTime: 1471285544.145170] [152.731000] 
+[INFO] [WallTime: 1471285544.146257] [152.731000] I cannot do this
+
+[INFO] [WallTime: 1471285544.261266] [152.831000] 
+[INFO] [WallTime: 1471285544.261885] [152.831000] I cannot do this
+
+[INFO] [WallTime: 1471285544.371337] [152.932000] 
+[INFO] [WallTime: 1471285544.371918] [152.932000] I cannot do this
+
+[INFO] [WallTime: 1471285544.482808] [153.033000] 
+[INFO] [WallTime: 1471285544.484073] [153.034000] I cannot do this
+
+[INFO] [WallTime: 1471285544.588702] [153.134000] 
+[INFO] [WallTime: 1471285544.589733] [153.134000] I cannot do this
+
+[INFO] [WallTime: 1471285544.699461] [153.234000] 
+[INFO] [WallTime: 1471285544.700323] [153.234000] I cannot do this
+
+[INFO] [WallTime: 1471285544.807305] [153.334000] 
+[INFO] [WallTime: 1471285544.808245] [153.334000] I cannot do this
+
+[INFO] [WallTime: 1471285544.923599] [153.437000] 
+[INFO] [WallTime: 1471285544.924463] [153.438000] I cannot do this
+
+[INFO] [WallTime: 1471285545.031985] [153.539000] 
+[INFO] [WallTime: 1471285545.033229] [153.540000] I cannot do this
+
+[INFO] [WallTime: 1471285545.144603] [153.641000] 
+[INFO] [WallTime: 1471285545.147333] [153.641000] I cannot do this
+
+[INFO] [WallTime: 1471285545.254017] [153.742000] 
+[INFO] [WallTime: 1471285545.254887] [153.742000] I cannot do this
+
+[INFO] [WallTime: 1471285545.369834] [153.843000] 
+[INFO] [WallTime: 1471285545.370532] [153.843000] I cannot do this
+
+[INFO] [WallTime: 1471285545.490583] [153.946000] 
+[INFO] [WallTime: 1471285545.491350] [153.947000] I cannot do this
+[INFO] [WallTime: 1471285546.048387] [154.450000] idle
+[INFO] [WallTime: 1471285546.050494] [154.450000] State machine starting in initial state 'Recharge' with userdata: 
+	[]
+[INFO] [WallTime: 1471285546.064530] [154.462000] State machine terminating 'Recharge':'outcome1':'nextOrder'
+
+[INFO] [WallTime: 1471285546.715202] [155.064000] 
+[INFO] [WallTime: 1471285546.717297] [155.064000] I cannot do this
+
+[INFO] [WallTime: 1471285546.820514] [155.164000] 
+[INFO] [WallTime: 1471285546.821696] [155.164000] I cannot do this
+
+[INFO] [WallTime: 1471285546.926909] [155.264000] 
+[INFO] [WallTime: 1471285546.927872] [155.264000] I cannot do this
+
+[INFO] [WallTime: 1471285547.037110] [155.366000] 
+[INFO] [WallTime: 1471285547.038932] [155.367000] I cannot do this
+
+[INFO] [WallTime: 1471285547.147201] [155.468000] 
+[INFO] [WallTime: 1471285547.148349] [155.468000] I cannot do this
+
+[INFO] [WallTime: 1471285547.265544] [155.573000] 
+[INFO] [WallTime: 1471285547.267697] [155.573000] I cannot do this
+
+[INFO] [WallTime: 1471285547.384357] [155.681000] 
+[INFO] [WallTime: 1471285547.385144] [155.681000] I cannot do this
+
+[INFO] [WallTime: 1471285547.491647] [155.782000] 
+[INFO] [WallTime: 1471285547.493159] [155.782000] I cannot do this
+
+[INFO] [WallTime: 1471285547.595836] [155.882000] 
+[INFO] [WallTime: 1471285547.597275] [155.882000] I cannot do this
+
+[INFO] [WallTime: 1471285547.701073] [155.982000] 
+[INFO] [WallTime: 1471285547.702100] [155.983000] I cannot do this
+
+[INFO] [WallTime: 1471285547.815143] [156.087000] 
+[INFO] [WallTime: 1471285547.815717] [156.087000] I cannot do this
+
+[INFO] [WallTime: 1471285547.923768] [156.187000] 
+[INFO] [WallTime: 1471285547.924522] [156.187000] I cannot do this
+
+[INFO] [WallTime: 1471285548.042744] [156.295000] 
+[INFO] [WallTime: 1471285548.043580] [156.295000] I cannot do this
+
+[INFO] [WallTime: 1471285548.150288] [156.395000] 
+[INFO] [WallTime: 1471285548.151148] [156.395000] I cannot do this
+
+[INFO] [WallTime: 1471285548.265553] [156.500000] 
+[INFO] [WallTime: 1471285548.266198] [156.500000] I cannot do this
+
+[INFO] [WallTime: 1471285548.372279] [156.600000] 
+[INFO] [WallTime: 1471285548.373025] [156.600000] I cannot do this
+
+[INFO] [WallTime: 1471285548.482783] [156.702000] 
+[INFO] [WallTime: 1471285548.484924] [156.702000] I cannot do this
+
+[INFO] [WallTime: 1471285548.587311] [156.804000] 
+[INFO] [WallTime: 1471285548.587848] [156.804000] I cannot do this
+
+[INFO] [WallTime: 1471285548.704421] [156.907000] 
+[INFO] [WallTime: 1471285548.705329] [156.907000] I cannot do this
+
+[INFO] [WallTime: 1471285548.813724] [157.008000] 
+[INFO] [WallTime: 1471285548.814301] [157.008000] I cannot do this
+
+[INFO] [WallTime: 1471285548.924939] [157.110000] 
+[INFO] [WallTime: 1471285548.925704] [157.110000] I cannot do this
+
+[INFO] [WallTime: 1471285549.042155] [157.210000] 
+[INFO] [WallTime: 1471285549.043184] [157.210000] I cannot do this
+
+[INFO] [WallTime: 1471285549.154371] [157.310000] 
+[INFO] [WallTime: 1471285549.155284] [157.310000] I cannot do this
+
+[INFO] [WallTime: 1471285549.270210] [157.416000] 
+[INFO] [WallTime: 1471285549.271059] [157.416000] I cannot do this
+
+[INFO] [WallTime: 1471285549.377144] [157.517000] 
+[INFO] [WallTime: 1471285549.378257] [157.518000] I cannot do this
+
+[INFO] [WallTime: 1471285549.487064] [157.620000] 
+[INFO] [WallTime: 1471285549.489262] [157.620000] I cannot do this
+
+[INFO] [WallTime: 1471285549.590847] [157.720000] 
+[INFO] [WallTime: 1471285549.591950] [157.721000] I cannot do this
+
+[INFO] [WallTime: 1471285549.705956] [157.823000] 
+[INFO] [WallTime: 1471285549.707225] [157.824000] I cannot do this
+
+[INFO] [WallTime: 1471285549.815095] [157.924000] 
+[INFO] [WallTime: 1471285549.816766] [157.926000] I cannot do this
+
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+clean
+[INFO] [WallTime: 1471285549.924587] [158.026000] clean
+[INFO] [WallTime: 1471285549.930037] [158.029000] State machine starting in initial state 'Human' with userdata: 
+	[]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+sink
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended
+ended

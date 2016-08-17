@@ -1,0 +1,11 @@
+receivesignal
+set_param gaze = 0
+set_param gaze = 0
+set_param location = 1
+set_param pressure = 0
+bored
+set_param pressure = 0
+bored
+receivesignal
+bored
+set_param gaze = 0

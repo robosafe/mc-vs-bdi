@@ -11,6 +11,6 @@ Contents:
 - Table assembly (cooperative manufacture) simulator (new version)
 - Tiago (home care) simulator components (to be used in combination with the installation from: http://wiki.ros.org/Robots/TIAGo)
 - Results:
-    - Models
-    - Tests
-    - Logs
+    - Models: BDI, and PTA (with properties)
+    - Tests: BDI, MC (model checking), and PR (pseudorandom)
+    - Logs: BDI, MC and PR

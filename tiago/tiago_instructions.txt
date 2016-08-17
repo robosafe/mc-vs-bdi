@@ -1,0 +1,41 @@
+Install ROS, Gazebo and MoveIt!, from instructions in:
+https://github.com/robosafe/testbench/blob/master/INSTALL_INSTRUCTIONS.txt
+
+Install Tiago (for ROS Indigo) following instructions in:
+http://wiki.ros.org/Robots/TIAGo
+
+Replace/add the following files to the Tiago packages
+
+/pmb2_robot/pmb2_description/urdf/sensors:
+- hokuyo_urg_04lx_ug01_laser.gazebo.xacro
+
+/tiago_moveit_config/config:
+- tiago_steel.srdf
+
+/tiago_robot/tiago_bringup/config:
+- tiago_motions.yaml
+
+/tiago_robot/tiago_bringup/launch:
+- tiago_bringup.launch
+
+/tiago_robot/tiago_controller_configuration/launch:
+- gripper_controller.launch
+
+/tiago_simulation/tiago_gazebo/launch:
+- tiago_spawn.launch
+- tiago_gazebo.launch
+
+/tiago_simulation/tiago_gazebo/scripts:
+- robot.py
+- human.py
+- sensors.py
+- dog.py
+- assertion1.py
+- assertion2.py
+- assertion3.py
+- /mbt/*
+- /abstract_tests/*
+- /pr_tests/*
+
+/tiago_simulation/tiago_gazebo/world:
+- house.world

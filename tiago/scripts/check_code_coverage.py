@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
 """
-This script performs a post-processing to adjust the coverage statistics, to account for statements that are marked as not executed when they might have been. 
 
 Written by Dejanira Araiza-Illan, May 2015
 """

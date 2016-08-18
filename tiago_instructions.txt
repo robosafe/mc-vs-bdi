@@ -44,4 +44,4 @@ http://wiki.ros.org/Robots/TIAGo
 /tiago_simulation/tiago_gazebo/world:
 - house.world
 
----Put the tiago.sh bash file in your home directory, and run it from there.
+---Put the tiago.sh bash file in your home directory, and run it from there, uncommenting the line according to the type of test to run (bdi, pseudorandom or model checking based). 

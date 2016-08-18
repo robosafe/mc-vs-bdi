@@ -4,7 +4,7 @@ https://github.com/robosafe/testbench/blob/master/INSTALL_INSTRUCTIONS.txt
 ---Install the coverage module:
 https://coverage.readthedocs.io/en/coverage-4.2/install.html
 
----Download the 3 table packages and put them in a Catkin workspace named 'catkin_ws'.
+---Download the 2 table packages (table_simulator, bert2_moveit) put them in a Catkin workspace named 'catkin_ws'.
 
 
 ---Put the table.sh bash file in your home directory, and run it from there, uncommenting the line according to the type of test to run (bdi, pseudorandom or model checking based). 

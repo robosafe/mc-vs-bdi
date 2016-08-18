@@ -1,0 +1,4 @@
+tell humanReady
+set_param pressure = 1
+set_param location = 0
+receivesignal

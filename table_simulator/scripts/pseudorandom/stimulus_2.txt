@@ -1,0 +1,6 @@
+tell leg
+set_param location = 0
+tell humanReady
+tell leg
+set_param pressure = 0
+tell leg

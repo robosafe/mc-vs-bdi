@@ -1,0 +1,8 @@
+set_param pressure = 1
+bored
+tell humanReady
+set_param pressure = 0
+receivesignal
+bored
+bored
+tell leg

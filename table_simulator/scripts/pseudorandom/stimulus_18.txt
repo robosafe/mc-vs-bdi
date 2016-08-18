@@ -1,0 +1,15 @@
+set_param location = 0
+set_param location = 1
+set_param pressure = 0
+tell humanReady
+set_param pressure = 0
+receivesignal
+tell leg
+set_param gaze = 0
+tell leg
+set_param gaze = 0
+set_param gaze = 0
+receivesignal
+tell leg
+set_param gaze = 0
+set_param location = 1

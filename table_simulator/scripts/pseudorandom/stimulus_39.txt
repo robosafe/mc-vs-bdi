@@ -1,0 +1,4 @@
+tell leg
+set_param gaze = 0
+receivesignal
+bored

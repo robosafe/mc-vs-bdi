@@ -1,3 +1,0 @@
-clean
-opendoor
-sink

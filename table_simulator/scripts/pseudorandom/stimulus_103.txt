@@ -1,0 +1,5 @@
+receivesignal
+tell leg
+set_param pressure = 1
+tell humanReady
+set_param gaze = 0

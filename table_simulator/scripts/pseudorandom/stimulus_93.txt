@@ -1,0 +1,12 @@
+receivesignal
+tell humanReady
+bored
+set_param gaze = 0
+set_param gaze = 0
+set_param pressure = 1
+set_param pressure = 0
+bored
+set_param gaze = 0
+bored
+bored
+set_param pressure = 1

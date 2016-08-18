@@ -1,0 +1,7 @@
+bored
+set_param pressure = 0
+receivesignal
+set_param gaze = 1
+set_param location = 1
+set_param gaze = 1
+tell humanReady

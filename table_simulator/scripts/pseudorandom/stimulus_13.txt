@@ -1,0 +1,4 @@
+receivesignal
+tell humanReady
+set_param location = 1
+set_param gaze = 0

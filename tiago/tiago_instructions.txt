@@ -1,10 +1,13 @@
-Install ROS, Gazebo and MoveIt!, from instructions in:
+---Install ROS, Gazebo and MoveIt!, from instructions in:
 https://github.com/robosafe/testbench/blob/master/INSTALL_INSTRUCTIONS.txt
 
-Install Tiago (for ROS Indigo) following instructions in:
+---Install the coverage module:
+https://coverage.readthedocs.io/en/coverage-4.2/install.html
+
+---Install Tiago (for ROS Indigo) following instructions in, and putting it in a Catkin workspace named 'catkin_ws':
 http://wiki.ros.org/Robots/TIAGo
 
-Replace/add the following files to the Tiago packages
+---Replace/add the following files to the Tiago packages:
 
 /pmb2_robot/pmb2_description/urdf/sensors:
 - hokuyo_urg_04lx_ug01_laser.gazebo.xacro
@@ -33,9 +36,12 @@ Replace/add the following files to the Tiago packages
 - assertion1.py
 - assertion2.py
 - assertion3.py
+- check_code_coverage.py
 - /mbt/*
 - /abstract_tests/*
 - /pr_tests/*
 
 /tiago_simulation/tiago_gazebo/world:
 - house.world
+
+---Put the tiago.sh bash file in your home directory, and run it from there.

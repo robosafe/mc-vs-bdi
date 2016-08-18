@@ -29,10 +29,10 @@ for name, obj in inspect.getmembers(robot):
 		functions_number+=1
 
 #Get statistics from html reports
-for i, line in enumerate(open('/home/dejanira/catkin_ws/covhtml/src_tiago_simulation_tiago_gazebo_scripts_robot_py.html', 'r')): 
+for i, line in enumerate(open(os.getcwd()+'/covhtml/src_tiago_simulation_tiago_gazebo_scripts_robot_py.html', 'r')): 
 	for match in re.finditer("        <h2 class=\"stats\">",line):
 		the_line = i+1
-for i, line in enumerate(open('/home/dejanira/catkin_ws/covhtml/src_tiago_simulation_tiago_gazebo_scripts_robot_py.html', 'r')): 
+for i, line in enumerate(open(os.getcwd()+'/covhtml/src_tiago_simulation_tiago_gazebo_scripts_robot_py.html', 'r')): 
 	if i==the_line:
 		number = re.split("statements &nbsp;", line)
 	if i==the_line+1:

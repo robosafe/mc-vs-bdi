@@ -7,6 +7,7 @@ Run in directory above /results (downloaded from the Github repository)
 import matplotlib.pyplot as plt2
 import numpy as np
 import re
+import os
 
 
 bdi_results2=[0]

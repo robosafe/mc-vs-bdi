@@ -7,6 +7,8 @@ Run from directory above /results (downloaded from the Github repository)
 '''
 
 import re
+import os
+
 idle=[]
 fri=[]
 sin=[]

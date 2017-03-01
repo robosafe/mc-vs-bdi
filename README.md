@@ -13,4 +13,3 @@ Contents:
 - Results:
     - Models: BDI, and PTA (with properties)
     - Tests: BDI, MC (model checking), and PR (pseudorandom)
-    - Logs: BDI, MC and PR

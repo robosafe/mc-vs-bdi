@@ -1,7 +1,0 @@
-[INFO] [WallTime: 1470686187.631439] [15281.700000] State machine starting in initial state 'Timeout0' with userdata: 
-	[]
-Bored
-[INFO] [WallTime: 1470686187.733604] [15281.801000] State machine transitioning 'Timeout0':'outcome1'-->'Pressure11'
-[INFO] [WallTime: 1470686187.735704] [15281.803000] State machine transitioning 'Pressure11':'outcome1'-->'Pressure12'
-[INFO] [WallTime: 1470686187.736181] [15281.803000] State machine transitioning 'Pressure12':'outcome1'-->'Gaze13'
-[INFO] [WallTime: 1470686187.842967] [15281.905000] State machine terminating 'Gaze13':'outcome1':'end'

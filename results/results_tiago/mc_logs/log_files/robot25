@@ -1,9 +1,0 @@
-[INFO] [WallTime: 1471194260.321776] [0.000000] Waiting for motion servers...
-[INFO] [WallTime: 1471194260.371542] [0.000000] ...connected.
-[INFO] [WallTime: 1471194263.924357] [12.885000] Robot is ready
-clean
-[INFO] [WallTime: 1471194264.045936] [12.987000] clean
-[INFO] [WallTime: 1471194264.047830] [12.987000] State machine starting in initial state 'Human' with userdata: 
-	[]
-
-ended

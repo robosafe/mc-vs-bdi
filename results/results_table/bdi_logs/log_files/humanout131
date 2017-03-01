@@ -1,6 +1,0 @@
-[INFO] [WallTime: 1470715850.309277] [0.000000] State machine starting in initial state 'Location00' with userdata: 
-	[]
-[INFO] [WallTime: 1470715852.029465] [14970.117000] State machine transitioning 'Location00':'outcome1'-->'SendA21'
-[INFO] [WallTime: 1470715866.791535] [14973.223000] State machine transitioning 'SendA21':'outcome1'-->'SendA22'
-[INFO] [WallTime: 1470715880.891983] [14976.325000] State machine transitioning 'SendA22':'outcome1'-->'Pressure13'
-[INFO] [WallTime: 1470715880.897982] [14976.325000] State machine terminating 'Pressure13':'outcome1':'end'

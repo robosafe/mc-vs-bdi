@@ -1,3 +1,0 @@
-Assertion 2 at test 64: Passed at global time 47.2639770508
-Assertion 2 at test 116: Passed at global time 27.74157691
-Assertion 2 at test 128: Passed at global time 49.4049258232

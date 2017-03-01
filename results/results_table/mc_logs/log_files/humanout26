@@ -1,8 +1,0 @@
-[INFO] [WallTime: 1470673720.116066] [0.000000] State machine starting in initial state 'SendA10' with userdata: 
-	[]
-[INFO] [WallTime: 1470673727.530461] [6148.805000] State machine transitioning 'SendA10':'outcome1'-->'Timeout1'
-Bored
-[INFO] [WallTime: 1470673727.658147] [6148.905000] State machine transitioning 'Timeout1':'outcome1'-->'SendA12'
-[INFO] [WallTime: 1470673734.716358] [6154.006000] State machine transitioning 'SendA12':'outcome1'-->'Timeout3'
-Bored
-[INFO] [WallTime: 1470673734.849389] [6154.107000] State machine terminating 'Timeout3':'outcome1':'end'

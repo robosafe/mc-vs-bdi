@@ -18,7 +18,7 @@ for kk in range(10,51):
 		human = 0
 		idl = 0
 		finished = 0
-		for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_pr/seed'+str(kk)+'/robot'+str(i),'r')): 
+		for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_pr/seed'+str(kk)+'/robot'+str(i),'r')): 
 			if re.search('State machine starting in initial state',line) and re.search('Fridge',line):	
 				fridges = fridges + 1
 			if re.search('State machine starting in initial state',line) and re.search('Sink',line):	
@@ -40,7 +40,7 @@ for kk in range(10,51):
 		hfeed = 0
 		hclean = 0
 		hother = 0
-		for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_pr/seed'+str(kk)+'/human'+str(i),'r')): 
+		for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_pr/seed'+str(kk)+'/human'+str(i),'r')): 
 			if re.search("fridge",line):	
 				hfri = hfri + 1
 			elif re.search("sink", line):

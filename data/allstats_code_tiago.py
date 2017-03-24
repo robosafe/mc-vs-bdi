@@ -18,7 +18,7 @@ varieties_mb1 = []
 for jj in range(10,51):
 	temp_bdi=[]
 	temp_var_bdi=[]
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_bdi/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open('/data_diffseeds_tiago_bdi/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])
@@ -32,7 +32,7 @@ for jj in range(10,51):
 	varieties_bdi1.append(len(temp_var_bdi))
 	temp_pr=[]
 	temp_var_pr=[]
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_pr/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open('/data_diffseeds_tiago_pr/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])
@@ -46,7 +46,7 @@ for jj in range(10,51):
 	varieties_pr1.append(len(temp_var_pr))
 	temp_mb=[]
 	temp_var_mb=[]
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open('/data_diffseeds_tiago_mc/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])

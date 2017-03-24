@@ -6,7 +6,7 @@ failed = 0
 checked = []
 result=[]
 for ii in range(10,51):
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/assertion1_'+str(ii)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/assertion1_'+str(ii)+'.txt','r')): 
 		getdata = re.split("Assertion 1 at test",line)
 		gettest = re.split("[:]",getdata[1]) #test at 0
 		getporf = re.split("at global time",gettest[1])
@@ -46,7 +46,7 @@ failed = 0
 checked = []
 result=[]
 for ii in range(10,51):
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/assertion2_'+str(ii)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/assertion2_'+str(ii)+'.txt','r')): 
 		getdata = re.split("Assertion 1 at test",line)
 		gettest = re.split("[:]",getdata[1]) #test at 0
 		getporf = re.split("at global time",gettest[1])
@@ -86,7 +86,7 @@ failed = 0
 checked = []
 result=[]
 for ii in range(10,51):
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/assertion3_'+str(ii)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/assertion3_'+str(ii)+'.txt','r')): 
 		getdata = re.split("Assertion 4 at test",line)
 		gettest = re.split("[:]",getdata[1]) #test at 0
 		getporf = re.split("at global time",gettest[1])
@@ -125,7 +125,7 @@ failed = 0
 checked = []
 result=[]
 for ii in range(10,51):
-	for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/assertion4_'+str(ii)+'.txt','r')):  
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/assertion4_'+str(ii)+'.txt','r')):  
 		getdata = re.split("Assertion 4 at test",line)
 		gettest = re.split("[:]",getdata[1]) #test at 0
 		getporf = re.split("at global time",gettest[1])

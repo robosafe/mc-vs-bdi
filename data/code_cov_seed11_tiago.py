@@ -8,7 +8,7 @@ pr_results1=[0]
 mb_results1=[0]
 
 
-for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_bdi/stats_11.txt','r')): 
+for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_bdi/stats_11.txt','r')): 
 	if re.search("Covered percentage",line):
 		getdata = re.split("Covered percentage[:]",line)
 		getdata = re.split("[%]",getdata[1])
@@ -16,7 +16,7 @@ for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_bdi
 max1 = max(bdi_results1)
 
 		
-for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_pr/stats_11.txt','r')): 
+for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_pr/stats_11.txt','r')): 
 	if re.search("Covered percentage",line):
 		getdata = re.split("Covered percentage[:]",line)
 		getdata = re.split("[%]",getdata[1])
@@ -25,7 +25,7 @@ max2 = max(pr_results1)
 
 
 	
-for num,line in enumerate(open('/home/da13683/temporary/data_diffseeds_tiago_mc/stats_11.txt','r')): 
+for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/stats_11.txt','r')): 
 	if re.search("Covered percentage",line):
 		getdata = re.split("Covered percentage[:]",line)
 		getdata = re.split("[%]",getdata[1])

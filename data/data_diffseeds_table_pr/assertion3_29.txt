@@ -1,0 +1,4 @@
+Assertion 3 at test 12: Passed at global time 45.9837260246
+Assertion 3 at test 16: Passed at global time 47.2686879635
+Assertion 3 at test 28: Passed at global time 47.6563231945
+Assertion 3 at test 96: Passed at global time 64.5779819489

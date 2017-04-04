@@ -1,0 +1,16 @@
+Assertion 3 at test 12: Passed at global time 47.935240984
+Assertion 3 at test 28: Passed at global time 46.6387619972
+Assertion 3 at test 47: Passed at global time 55.7439601421
+Assertion 3 at test 143: Passed at global time 71.5833950043
+Assertion 3 at test 152: Passed at global time 63.0717411041
+Assertion 3 at test 152: Passed at global time 95.6727590561
+Assertion 3 at test 152: Passed at global time 95.6837010384
+Assertion 3 at test 152: Passed at global time 95.6936120987
+Assertion 3 at test 152: Passed at global time 95.7018740177
+Assertion 3 at test 152: Passed at global time 95.7094480991
+Assertion 3 at test 152: Passed at global time 95.7404980659
+Assertion 3 at test 152: Passed at global time 95.8538811207
+Assertion 3 at test 152: Passed at global time 95.9270849228
+Assertion 3 at test 152: Passed at global time 95.958630085
+Assertion 3 at test 152: Passed at global time 96.0108990669
+Assertion 3 at test 152: Passed at global time 96.0726280212

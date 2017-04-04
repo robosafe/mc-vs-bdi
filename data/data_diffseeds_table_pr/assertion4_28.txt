@@ -1,0 +1,12 @@
+Assertion 4 at trace 2: True at global time 42.1437339783
+Assertion 4 at trace 11: True at global time 41.8032650948
+Assertion 4 at trace 28: True at global time 51.4327321053
+Assertion 4 at trace 30: True at global time 51.7889328003
+Assertion 4 at trace 38: True at global time 48.7963311672
+Assertion 4 at trace 52: True at global time 87.9114749432
+Assertion 4 at trace 59: True at global time 83.6711919308
+Assertion 4 at trace 102: True at global time 57.5872848034
+Assertion 4 at trace 123: True at global time 62.7533919811
+Assertion 4 at trace 146: True at global time 103.241407156
+Assertion 4 at trace 148: True at global time 103.542680025
+Assertion 4 at trace 152: True at global time 105.772829056

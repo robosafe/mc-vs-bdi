@@ -1,7 +1,16 @@
+#!/usr/bin/env python
+
+'''
+Written by Dejanira Araiza Illan, January 2017
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 import re
 from math import sqrt
+import os
+
+
 
 bdi_results1=[]
 pr_results1=[]
@@ -18,7 +27,7 @@ varieties_mb1 = []
 for jj in range(10,51):
 	temp_bdi=[]
 	temp_var_bdi=[]
-	for num,line in enumerate(open('/data_diffseeds_tiago_bdi/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_bdi/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])
@@ -32,7 +41,7 @@ for jj in range(10,51):
 	varieties_bdi1.append(len(temp_var_bdi))
 	temp_pr=[]
 	temp_var_pr=[]
-	for num,line in enumerate(open('/data_diffseeds_tiago_pr/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_pr/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])
@@ -46,7 +55,7 @@ for jj in range(10,51):
 	varieties_pr1.append(len(temp_var_pr))
 	temp_mb=[]
 	temp_var_mb=[]
-	for num,line in enumerate(open('/data_diffseeds_tiago_mc/stats_'+str(jj)+'.txt','r')): 
+	for num,line in enumerate(open(os.getcwd()+'/data_diffseeds_tiago_mc/stats_'+str(jj)+'.txt','r')): 
 		if re.search("Covered percentage",line):
 			getdata = re.split("Covered percentage[:]",line)
 			getdata = re.split("[%]",getdata[1])
@@ -138,6 +147,7 @@ plt.rcParams.update({'font.size': 10})
 plt.savefig('allstatsb.pdf')
 plt.savefig('allstatsb.eps')
 
+"""
 x1 = range(1,2051)
 doublemean_bdi = 0.0
 doublemean_mc = 0.0
@@ -161,3 +171,4 @@ plt.ylabel('Average code coverage (%)')
 plt.xlabel('Tests')
 plt.axis([0, 2050, 0, 105])
 plt.savefig('convergenceb.eps')
+"""

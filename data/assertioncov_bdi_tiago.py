@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+
+'''
+Written by Dejanira Araiza Illan, January 2017
+'''
+
 import re
 import os
 

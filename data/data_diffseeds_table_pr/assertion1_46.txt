@@ -1,0 +1,13 @@
+Assertion 1 at test 12: Passed at global time 26.675989151
+Assertion 1 at test 16: Passed at global time 25.5903921127
+Assertion 1 at test 47: Passed at global time 26.3571200371
+Assertion 1 at test 52: Passed at global time 25.0293967724
+Assertion 1 at test 52: Passed at global time 43.662612915
+Assertion 1 at test 73: Passed at global time 25.5395960808
+Assertion 1 at test 96: Passed at global time 30.2570610046
+Assertion 1 at test 116: Failed at global time 45.34689188
+Assertion 1 at test 136: Passed at global time 31.0127880573
+Assertion 1 at test 140: Passed at global time 25.7310709953
+Assertion 1 at test 148: Passed at global time 52.0489659309
+Assertion 1 at test 152: Passed at global time 28.2916488647
+Assertion 1 at test 152: Passed at global time 50.2346799374

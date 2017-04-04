@@ -1,7 +1,13 @@
+#!/usr/bin/env python
+'''
+Written by Dejanira Araiza Illan, January 2017
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 import re
 from math import sqrt
+import os
 
 bdi_results1=[0]
 pr_results1=[0]
